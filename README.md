@@ -16,11 +16,9 @@ O painel consome dados públicos e oficiais, extraídos e processados rotineiram
   - Modelagem de densidade espacial (Kernel Density Estimation - KDE) modelada através de `spatstat` e `raster` para cálculo e traçado inteligente das isolinhas de concentração dos alertas.
   - Exportação final rigorosamente estruturada em arquivos leves estáticos (`.geojson` e `.json`).
 
-- **Front-end do Dashboard (Vanilla JS):**
+- **Front-end (Vanilla JS):**
   - Interface baseada em Single Page Application (SPA), operando 100% Serverless.
   - Motor de renderização geográfica via `Leaflet.js` sobre malhas base CARTO Dark Matter.
   - Engenharia de filtro multidimensional (ano, mês e tipologia de classe) gerenciado diretamente de maneira assíncrona na memória do cliente.
-
-## Automação da Atualização
 
 Os dados do painel são atualizados de forma automatizada. Um *cron job* está configurado no servidor para executar o pipeline de extração, processamento e deploy **no dia 1 de cada mês**.

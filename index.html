@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazônia GeomonitoR</title>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div id="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 7 9 3 5 7l4 4" />
+                  <path d="m17 11 4 4-4 4-4-4" />
+                  <path d="m8 12 4 4 6-6-4-4Z" />
+                  <path d="m16 8 3-3" />
+                  <path d="M9 21a6 6 0 0 0-6-6" />
+                </svg>
+                <div class="title-wrapper">
+                    <h1>Amazônia GeomonitoR</h1>
+                    <p class="header-subtitle">Monitoramento de supressão vegetal e degradação florestal via satélite. Dados oficiais: INPE (DETER).</p>
+                </div>
+            </div>
+            <div class="header-info">
+                <span id="last-update">Atualização: 03/05/2026</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <!-- Sidebar Area -->
+        <div id="sidebar">
+            <div class="panel filters-panel">
+                <div class="panel-section">
+                    <h2>Filtros Temporais</h2>
+                    <div class="filter-group">
+                        <label>Ano</label>
+                        <select id="filter-year">
+                            <option value="Todos">Todos os Anos</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Mês</label>
+                        <select id="filter-month">
+                            <option value="Todos">Todos os Meses</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Classe de Alerta</h2>
+                    <div id="class-filters" class="class-filters-grid">
+                        <!-- Gerado via JS -->
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Camadas do Mapa</h2>
+                    <div class="layer-controls">
+                        <label class="toggle-control">
+                            <input type="checkbox" id="toggle-alerts" checked>
+                            <span class="control-indicator"></span>
+                            <span class="control-label">Alertas DETER</span>
+                        </label>
+                        <label class="toggle-control">
+                            <input type="checkbox" id="toggle-kde" checked>
+                            <span class="control-indicator"></span>
+                            <span class="control-label">Densidade de Kernel</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel table-panel">
+                <div class="panel-header">
+                    <h2>Ranking Municipal</h2>
+                    <span class="badge" id="stats-count">0 alertas</span>
+                </div>
+                <div class="table-container">
+                    <table id="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Município / UF</th>
+                                <th class="text-right">Área (km²)</th>
+                                <th class="text-right">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="3" class="loading">Iniciando Geomonitor...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Area -->
+        <div id="map-container">
+            <div id="map"></div>
+            <div class="map-legend">
+                <div class="legend-section">
+                    <div class="legend-title">Classes de Alerta</div>
+                    <div class="legend-scale" id="legend-classes">
+                        <!-- Gerado via JS -->
+                    </div>
+                </div>
+                <div class="legend-section" style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
+                    <div class="legend-title">Densidade (KDE)</div>
+                    <div class="legend-scale">
+                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #f59e0b;"></span> Baixa</div>
+                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #ef4444;"></span> Média</div>
+                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #b91c1c;"></span> Alta</div>
+                    </div>
+                </div>
+                <div class="legend-section" style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
+                    <div class="legend-title">Limites (IBGE)</div>
+                    <div class="legend-scale">
+                        <div class="scale-item">
+                            <span class="color-dot" style="background: transparent; border: 2px dashed #ffffff; border-radius: 0;"></span> 
+                            Amazônia Legal
+                        </div>
+                        <div class="scale-item">
+                            <span class="color-dot" style="background: transparent; border: 2px dashed #10b981; border-radius: 0;"></span> 
+                            Bioma Amazônia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

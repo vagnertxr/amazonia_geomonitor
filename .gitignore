@@ -1,0 +1,15 @@
+# Ignorar bibliotecas R do projeto
+R_libs/
+
+# Ignorar arquivos gerados pelo RStudio/R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Caso existam variáveis de ambiente (senhas)
+.env
+
+# MacOS/Windows
+.DS_Store
+Thumbs.db

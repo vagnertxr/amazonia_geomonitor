@@ -24,8 +24,3 @@ O painel consome dados públicos e oficiais, extraídos e processados rotineiram
 ## Automação da Atualização
 
 Os dados do painel são atualizados de forma automatizada. Um *cron job* está configurado no servidor para executar o pipeline de extração, processamento e deploy **no dia 1 de cada mês**.
-
-```bash
-# Cron Job configurado para atualização mensal automática
-0 3 1 * * /home/vagner/amazonia_geomonitor/R_scripts/update_and_deploy.sh
-```

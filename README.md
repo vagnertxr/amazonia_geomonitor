@@ -8,7 +8,7 @@ O painel consome dados públicos e oficiais, extraídos e processados rotineiram
 - **Alertas DETER (INPE):** Dados do Sistema de Detecção de Desmatamento em Tempo Real (DETER) do Instituto Nacional de Pesquisas Espaciais (INPE). O escopo compreende alertas de diferentes tipologias de supressão de vegetação nativa, como Desmatamento (Corte Raso), Desmatamento com Vegetação, Mineração, Degradação e Cicatrizes de Queimada.
 - **Limites Territoriais:** Malhas geográficas vetoriais dos Estados e Municípios brasileiros, do Bioma Amazônia e da Amazônia Legal, fornecidas pelo IBGE (incorporadas através do pacote `geobr`).
 
-## Arquitetura Tecnológica
+## Arquitetura
 
 - **Back-end de Processamento (R):**
   - Scripts de automação (`update_all.R`) que extraem os dados vetoriais pesados via API WFS do TerraBrasilis.

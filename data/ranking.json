@@ -2056,8 +2056,8 @@
     "muni": "Juina",
     "uf": "MT",
     "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 0.336
+    "total_alertas": 2,
+    "area_km2": 2.5818
   },
   {
     "ano": 2024,
@@ -3036,8 +3036,8 @@
     "muni": "Amajari",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.5409
+    "total_alertas": 4,
+    "area_km2": 0.6229
   },
   {
     "ano": 2024,
@@ -3416,8 +3416,8 @@
     "muni": "Iracema",
     "uf": "RR",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 59,
-    "area_km2": 64.3239
+    "total_alertas": 60,
+    "area_km2": 64.4207
   },
   {
     "ano": 2024,
@@ -4078,6 +4078,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.4486
+  },
+  {
+    "ano": 2024,
+    "mes": 3,
+    "periodo": "03/2024",
+    "muni": "Sao Luiz",
+    "uf": "RR",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.0651
   },
   {
     "ano": 2024,
@@ -4896,8 +4906,8 @@
     "muni": "Manicore",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 1.249
+    "total_alertas": 6,
+    "area_km2": 1.5621
   },
   {
     "ano": 2024,
@@ -5276,8 +5286,8 @@
     "muni": "Rorainopolis",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 9,
-    "area_km2": 1.0592
+    "total_alertas": 10,
+    "area_km2": 1.1306
   },
   {
     "ano": 2024,
@@ -13966,8 +13976,8 @@
     "muni": "Uruara",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 21,
-    "area_km2": 10.9715
+    "total_alertas": 22,
+    "area_km2": 11.0741
   },
   {
     "ano": 2024,
@@ -14156,8 +14166,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 111,
-    "area_km2": 64.8539
+    "total_alertas": 120,
+    "area_km2": 68.0494
   },
   {
     "ano": 2024,
@@ -14166,8 +14176,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 8,
-    "area_km2": 1.5775
+    "total_alertas": 9,
+    "area_km2": 1.7326
   },
   {
     "ano": 2024,
@@ -14176,8 +14186,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 16,
-    "area_km2": 3.0725
+    "total_alertas": 17,
+    "area_km2": 3.1575
   },
   {
     "ano": 2024,
@@ -14307,7 +14317,7 @@
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 42,
-    "area_km2": 18.3749
+    "area_km2": 19.5657
   },
   {
     "ano": 2024,
@@ -14316,8 +14326,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.5009
+    "total_alertas": 3,
+    "area_km2": 1.571
   },
   {
     "ano": 2024,
@@ -14328,6 +14338,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 10,
     "area_km2": 2.9644
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Aragominas",
+    "uf": "TO",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.2964
   },
   {
     "ano": 2024,
@@ -14356,8 +14376,8 @@
     "muni": "Aripuana",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 18,
-    "area_km2": 22.5763
+    "total_alertas": 19,
+    "area_km2": 22.9251
   },
   {
     "ano": 2024,
@@ -14376,8 +14396,18 @@
     "muni": "Aripuana",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 6,
-    "area_km2": 1.7513
+    "total_alertas": 7,
+    "area_km2": 1.9025
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Ariquemes",
+    "uf": "RO",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.3791
   },
   {
     "ano": 2024,
@@ -14496,8 +14526,8 @@
     "muni": "Bannach",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 20,
-    "area_km2": 8.2183
+    "total_alertas": 21,
+    "area_km2": 8.2902
   },
   {
     "ano": 2024,
@@ -14518,6 +14548,16 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
     "area_km2": 0.2275
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Belterra",
+    "uf": "PA",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.3799
   },
   {
     "ano": 2024,
@@ -14558,6 +14598,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.0986
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Bom Jesus das Selvas",
+    "uf": "MA",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.4612
   },
   {
     "ano": 2024,
@@ -14656,8 +14706,8 @@
     "muni": "Caapiranga",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.2303
+    "total_alertas": 2,
+    "area_km2": 0.3336
   },
   {
     "ano": 2024,
@@ -14676,8 +14726,8 @@
     "muni": "Campo Novo de Rondonia",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 8,
-    "area_km2": 1.6807
+    "total_alertas": 11,
+    "area_km2": 2.2191
   },
   {
     "ano": 2024,
@@ -14706,8 +14756,8 @@
     "muni": "Candeias do Jamari",
     "uf": "RO",
     "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.1437
+    "total_alertas": 2,
+    "area_km2": 1.9608
   },
   {
     "ano": 2024,
@@ -14716,8 +14766,8 @@
     "muni": "Candeias do Jamari",
     "uf": "RO",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.061
+    "total_alertas": 5,
+    "area_km2": 1.1864
   },
   {
     "ano": 2024,
@@ -14846,8 +14896,8 @@
     "muni": "Coari",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.2009
+    "total_alertas": 2,
+    "area_km2": 0.2813
   },
   {
     "ano": 2024,
@@ -14876,8 +14926,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 8,
-    "area_km2": 2.6221
+    "total_alertas": 9,
+    "area_km2": 2.7677
   },
   {
     "ano": 2024,
@@ -14896,8 +14946,8 @@
     "muni": "Comodoro",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 7,
-    "area_km2": 4.62
+    "total_alertas": 9,
+    "area_km2": 5.8779
   },
   {
     "ano": 2024,
@@ -14913,11 +14963,31 @@
     "ano": 2024,
     "mes": 8,
     "periodo": "08/2024",
+    "muni": "Comodoro",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.1999
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
     "muni": "Conceiçao do Araguaia",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 8,
-    "area_km2": 20.3141
+    "total_alertas": 10,
+    "area_km2": 21.6418
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Confresa",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.1184
   },
   {
     "ano": 2024,
@@ -14926,8 +14996,8 @@
     "muni": "Conquista D'oeste",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 17,
-    "area_km2": 16.7497
+    "total_alertas": 19,
+    "area_km2": 18.9462
   },
   {
     "ano": 2024,
@@ -14996,8 +15066,8 @@
     "muni": "Cumaru do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 48,
-    "area_km2": 39.9877
+    "total_alertas": 49,
+    "area_km2": 40.2635
   },
   {
     "ano": 2024,
@@ -15126,8 +15196,8 @@
     "muni": "Governador Jorge Teixeira",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 12,
-    "area_km2": 4.1491
+    "total_alertas": 15,
+    "area_km2": 4.6114
   },
   {
     "ano": 2024,
@@ -15186,8 +15256,8 @@
     "muni": "Humaita",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 9,
-    "area_km2": 2.2157
+    "total_alertas": 11,
+    "area_km2": 2.642
   },
   {
     "ano": 2024,
@@ -15196,8 +15266,8 @@
     "muni": "Humaita",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.1488
+    "total_alertas": 3,
+    "area_km2": 1.3973
   },
   {
     "ano": 2024,
@@ -15216,8 +15286,8 @@
     "muni": "Ipixuna do Para",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.3616
+    "total_alertas": 3,
+    "area_km2": 0.8218
   },
   {
     "ano": 2024,
@@ -15235,9 +15305,29 @@
     "periodo": "08/2024",
     "muni": "Iracema",
     "uf": "RR",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.4323
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Iracema",
+    "uf": "RR",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.6282
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Itacoatiara",
+    "uf": "AM",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.6398
   },
   {
     "ano": 2024,
@@ -15256,8 +15346,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 45,
-    "area_km2": 47.1883
+    "total_alertas": 49,
+    "area_km2": 48.481
   },
   {
     "ano": 2024,
@@ -15276,8 +15366,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.5128
+    "total_alertas": 3,
+    "area_km2": 0.7718
   },
   {
     "ano": 2024,
@@ -15326,8 +15416,8 @@
     "muni": "Itinga do Maranhao",
     "uf": "MA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.3233
+    "total_alertas": 3,
+    "area_km2": 0.4093
   },
   {
     "ano": 2024,
@@ -15496,8 +15586,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 21,
-    "area_km2": 11.0331
+    "total_alertas": 23,
+    "area_km2": 11.2685
   },
   {
     "ano": 2024,
@@ -15506,8 +15596,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 7,
-    "area_km2": 4.9717
+    "total_alertas": 6,
+    "area_km2": 4.8119
   },
   {
     "ano": 2024,
@@ -15516,8 +15606,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 16,
-    "area_km2": 6.426
+    "total_alertas": 17,
+    "area_km2": 6.5896
   },
   {
     "ano": 2024,
@@ -15528,6 +15618,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.1072
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Manaquiri",
+    "uf": "AM",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.3049
   },
   {
     "ano": 2024,
@@ -15546,8 +15646,8 @@
     "muni": "Manicore",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 12,
-    "area_km2": 4.7887
+    "total_alertas": 13,
+    "area_km2": 4.8246
   },
   {
     "ano": 2024,
@@ -15565,9 +15665,19 @@
     "periodo": "08/2024",
     "muni": "Manoel Urbano",
     "uf": "AC",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.07
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Manoel Urbano",
+    "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 0.8001
+    "total_alertas": 7,
+    "area_km2": 1.0351
   },
   {
     "ano": 2024,
@@ -15656,8 +15766,8 @@
     "muni": "Maues",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 0.6438
+    "total_alertas": 3,
+    "area_km2": 0.5585
   },
   {
     "ano": 2024,
@@ -15676,8 +15786,8 @@
     "muni": "Maues",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 1.3889
+    "total_alertas": 6,
+    "area_km2": 1.6213
   },
   {
     "ano": 2024,
@@ -15796,8 +15906,8 @@
     "muni": "Nova Bandeirantes",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 2.9918
+    "total_alertas": 6,
+    "area_km2": 3.9113
   },
   {
     "ano": 2024,
@@ -15846,8 +15956,8 @@
     "muni": "Nova Lacerda",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 13,
-    "area_km2": 26.3179
+    "total_alertas": 14,
+    "area_km2": 26.4408
   },
   {
     "ano": 2024,
@@ -15858,6 +15968,16 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 5,
     "area_km2": 4.2603
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Nova Mamore",
+    "uf": "RO",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.2438
   },
   {
     "ano": 2024,
@@ -15876,8 +15996,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 14,
-    "area_km2": 9.0327
+    "total_alertas": 15,
+    "area_km2": 9.123
   },
   {
     "ano": 2024,
@@ -15966,8 +16086,8 @@
     "muni": "Nova Ubirata",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0885
+    "total_alertas": 2,
+    "area_km2": 0.2514
   },
   {
     "ano": 2024,
@@ -16026,8 +16146,8 @@
     "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 64,
-    "area_km2": 42.3298
+    "total_alertas": 67,
+    "area_km2": 43.3714
   },
   {
     "ano": 2024,
@@ -16116,8 +16236,8 @@
     "muni": "Ourilandia do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 25,
-    "area_km2": 42.3093
+    "total_alertas": 26,
+    "area_km2": 42.4154
   },
   {
     "ano": 2024,
@@ -16156,8 +16276,8 @@
     "muni": "Paragominas",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 3.1371
+    "total_alertas": 2,
+    "area_km2": 3.2869
   },
   {
     "ano": 2024,
@@ -16256,8 +16376,8 @@
     "muni": "Peixoto de Azevedo",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 18,
-    "area_km2": 15.1274
+    "total_alertas": 19,
+    "area_km2": 15.3642
   },
   {
     "ano": 2024,
@@ -16326,8 +16446,8 @@
     "muni": "Pontes E Lacerda",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 2.2044
+    "total_alertas": 5,
+    "area_km2": 2.9166
   },
   {
     "ano": 2024,
@@ -16376,8 +16496,8 @@
     "muni": "Porto Velho",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 35,
-    "area_km2": 34.5211
+    "total_alertas": 38,
+    "area_km2": 35.3379
   },
   {
     "ano": 2024,
@@ -16556,8 +16676,8 @@
     "muni": "Rondon do Para",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 0.3684
+    "total_alertas": 5,
+    "area_km2": 0.8406
   },
   {
     "ano": 2024,
@@ -16616,8 +16736,8 @@
     "muni": "Santa Carmem",
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 2.0711
+    "total_alertas": 3,
+    "area_km2": 4.7222
   },
   {
     "ano": 2024,
@@ -16755,6 +16875,16 @@
     "periodo": "08/2024",
     "muni": "Sao Felix do Araguaia",
     "uf": "MT",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 2,
+    "area_km2": 2.4935
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Sao Felix do Araguaia",
+    "uf": "MT",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.1074
@@ -16766,8 +16896,8 @@
     "muni": "Sao Felix do Xingu",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 184,
-    "area_km2": 94.2487
+    "total_alertas": 195,
+    "area_km2": 99.3584
   },
   {
     "ano": 2024,
@@ -16836,8 +16966,8 @@
     "muni": "Sao Jose do Xingu",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 9,
-    "area_km2": 17.6204
+    "total_alertas": 10,
+    "area_km2": 18.4621
   },
   {
     "ano": 2024,
@@ -16855,9 +16985,19 @@
     "periodo": "08/2024",
     "muni": "Sena Madureira",
     "uf": "AC",
+    "classe": "CS_DESORDENADO",
+    "total_alertas": 1,
+    "area_km2": 1.2222
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Sena Madureira",
+    "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 9,
-    "area_km2": 0.846
+    "total_alertas": 11,
+    "area_km2": 0.9905
   },
   {
     "ano": 2024,
@@ -16896,8 +17036,18 @@
     "muni": "Sinop",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.6318
+    "total_alertas": 3,
+    "area_km2": 0.9545
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "Tabapora",
+    "uf": "MT",
+    "classe": "CS_DESORDENADO",
+    "total_alertas": 1,
+    "area_km2": 2.4734
   },
   {
     "ano": 2024,
@@ -17116,8 +17266,8 @@
     "muni": "Ulianopolis",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.5237
+    "total_alertas": 3,
+    "area_km2": 0.5924
   },
   {
     "ano": 2024,
@@ -17206,8 +17356,8 @@
     "muni": "Vilhena",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 8,
-    "area_km2": 5.2339
+    "total_alertas": 9,
+    "area_km2": 6.1809
   },
   {
     "ano": 2024,
@@ -17216,8 +17366,8 @@
     "muni": "Xapuri",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1911
+    "total_alertas": 3,
+    "area_km2": 0.2634
   },
   {
     "ano": 2024,
@@ -17248,6 +17398,16 @@
     "classe": "CS_DESORDENADO",
     "total_alertas": 1,
     "area_km2": 3.0991
+  },
+  {
+    "ano": 2024,
+    "mes": 8,
+    "periodo": "08/2024",
+    "muni": "obidos",
+    "uf": "PA",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.0899
   },
   {
     "ano": 2024,
@@ -17316,8 +17476,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 252,
-    "area_km2": 263.5517
+    "total_alertas": 251,
+    "area_km2": 261.5555
   },
   {
     "ano": 2024,
@@ -17326,8 +17486,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 10,
-    "area_km2": 3.6474
+    "total_alertas": 9,
+    "area_km2": 3.5677
   },
   {
     "ano": 2024,
@@ -17366,8 +17526,8 @@
     "muni": "Alto Boa Vista",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 10,
-    "area_km2": 4.6815
+    "total_alertas": 9,
+    "area_km2": 4.415
   },
   {
     "ano": 2024,
@@ -17856,8 +18016,8 @@
     "muni": "Borba",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 6,
-    "area_km2": 7.0503
+    "total_alertas": 7,
+    "area_km2": 7.454
   },
   {
     "ano": 2024,
@@ -18036,8 +18196,8 @@
     "muni": "Canutama",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 15,
-    "area_km2": 3.4719
+    "total_alertas": 14,
+    "area_km2": 3.3947
   },
   {
     "ano": 2024,
@@ -18046,8 +18206,8 @@
     "muni": "Canutama",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 4,
-    "area_km2": 1.401
+    "total_alertas": 3,
+    "area_km2": 1.1902
   },
   {
     "ano": 2024,
@@ -18206,8 +18366,8 @@
     "muni": "Claudia",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 9,
-    "area_km2": 2.0259
+    "total_alertas": 10,
+    "area_km2": 2.6839
   },
   {
     "ano": 2024,
@@ -18376,8 +18536,8 @@
     "muni": "Cumaru do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 72,
-    "area_km2": 116.7515
+    "total_alertas": 74,
+    "area_km2": 125.2321
   },
   {
     "ano": 2024,
@@ -18526,8 +18686,8 @@
     "muni": "Gaucha do Norte",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 7,
-    "area_km2": 17.6238
+    "total_alertas": 8,
+    "area_km2": 21.4863
   },
   {
     "ano": 2024,
@@ -18636,8 +18796,8 @@
     "muni": "Humaita",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 10,
-    "area_km2": 7.1129
+    "total_alertas": 11,
+    "area_km2": 7.2139
   },
   {
     "ano": 2024,
@@ -18746,8 +18906,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 68,
-    "area_km2": 128.93
+    "total_alertas": 69,
+    "area_km2": 128.9368
   },
   {
     "ano": 2024,
@@ -18926,8 +19086,8 @@
     "muni": "Juara",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 60,
-    "area_km2": 54.6835
+    "total_alertas": 61,
+    "area_km2": 55.4941
   },
   {
     "ano": 2024,
@@ -18946,8 +19106,8 @@
     "muni": "Juina",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 21,
-    "area_km2": 34.3852
+    "total_alertas": 20,
+    "area_km2": 23.7666
   },
   {
     "ano": 2024,
@@ -18996,8 +19156,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 29,
-    "area_km2": 44.5127
+    "total_alertas": 28,
+    "area_km2": 44.3897
   },
   {
     "ano": 2024,
@@ -19166,8 +19326,8 @@
     "muni": "Marcelandia",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 80,
-    "area_km2": 55.4003
+    "total_alertas": 81,
+    "area_km2": 56.1407
   },
   {
     "ano": 2024,
@@ -19336,8 +19496,8 @@
     "muni": "Nova Lacerda",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 15,
-    "area_km2": 35.5128
+    "total_alertas": 16,
+    "area_km2": 37.6198
   },
   {
     "ano": 2024,
@@ -19356,8 +19516,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 44,
-    "area_km2": 26.6868
+    "total_alertas": 42,
+    "area_km2": 25.9034
   },
   {
     "ano": 2024,
@@ -19606,8 +19766,8 @@
     "muni": "Ourilandia do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 115,
-    "area_km2": 205.6897
+    "total_alertas": 123,
+    "area_km2": 229.8426
   },
   {
     "ano": 2024,
@@ -19678,6 +19838,16 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 18,
     "area_km2": 13.8258
+  },
+  {
+    "ano": 2024,
+    "mes": 9,
+    "periodo": "09/2024",
+    "muni": "Paranaita",
+    "uf": "MT",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.0712
   },
   {
     "ano": 2024,
@@ -19796,8 +19966,8 @@
     "muni": "Peixoto de Azevedo",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 172,
-    "area_km2": 153.1776
+    "total_alertas": 171,
+    "area_km2": 152.4676
   },
   {
     "ano": 2024,
@@ -19986,8 +20156,8 @@
     "muni": "Porto Velho",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 56,
-    "area_km2": 31.0888
+    "total_alertas": 53,
+    "area_km2": 30.1615
   },
   {
     "ano": 2024,
@@ -20186,8 +20356,8 @@
     "muni": "Rondolandia",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 9.3261
+    "total_alertas": 6,
+    "area_km2": 9.7136
   },
   {
     "ano": 2024,
@@ -20436,8 +20606,8 @@
     "muni": "Sao Felix do Xingu",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 538,
-    "area_km2": 565.1874
+    "total_alertas": 556,
+    "area_km2": 604.5611
   },
   {
     "ano": 2024,
@@ -21116,8 +21286,8 @@
     "muni": "Alto Alegre dos Parecis",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 9.5542
+    "total_alertas": 3,
+    "area_km2": 3.6742
   },
   {
     "ano": 2024,
@@ -21266,8 +21436,8 @@
     "muni": "Apiacas",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 46,
-    "area_km2": 39.5513
+    "total_alertas": 44,
+    "area_km2": 33.3217
   },
   {
     "ano": 2024,
@@ -21916,8 +22086,8 @@
     "muni": "Candeias do Jamari",
     "uf": "RO",
     "classe": "DEGRADACAO",
-    "total_alertas": 10,
-    "area_km2": 2.7469
+    "total_alertas": 8,
+    "area_km2": 2.5385
   },
   {
     "ano": 2024,
@@ -22426,8 +22596,8 @@
     "muni": "Cumaru do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 61,
-    "area_km2": 61.0413
+    "total_alertas": 62,
+    "area_km2": 61.3161
   },
   {
     "ano": 2024,
@@ -23076,8 +23246,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 81,
-    "area_km2": 45.932
+    "total_alertas": 80,
+    "area_km2": 45.8598
   },
   {
     "ano": 2024,
@@ -23176,8 +23346,8 @@
     "muni": "Manicore",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 14,
-    "area_km2": 6.3087
+    "total_alertas": 13,
+    "area_km2": 6.1478
   },
   {
     "ano": 2024,
@@ -23536,8 +23706,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 3.167
+    "total_alertas": 4,
+    "area_km2": 3.0363
   },
   {
     "ano": 2024,
@@ -23936,8 +24106,8 @@
     "muni": "Peixoto de Azevedo",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 42,
-    "area_km2": 79.5967
+    "total_alertas": 40,
+    "area_km2": 75.572
   },
   {
     "ano": 2024,
@@ -24087,7 +24257,7 @@
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 66,
-    "area_km2": 37.9021
+    "area_km2": 36.7465
   },
   {
     "ano": 2024,
@@ -24436,8 +24606,8 @@
     "muni": "Santa Terezinha",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 14,
-    "area_km2": 14.2426
+    "total_alertas": 15,
+    "area_km2": 23.0484
   },
   {
     "ano": 2024,
@@ -25566,8 +25736,8 @@
     "muni": "Brasil Novo",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.5679
+    "total_alertas": 5,
+    "area_km2": 0.7291
   },
   {
     "ano": 2024,
@@ -26046,8 +26216,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 10,
-    "area_km2": 7.7967
+    "total_alertas": 11,
+    "area_km2": 8.1392
   },
   {
     "ano": 2024,
@@ -26806,8 +26976,8 @@
     "muni": "Rondon do Para",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 13,
-    "area_km2": 14.5838
+    "total_alertas": 12,
+    "area_km2": 13.8779
   },
   {
     "ano": 2024,
@@ -27226,8 +27396,8 @@
     "muni": "Vila Rica",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 3,
-    "area_km2": 0.5301
+    "total_alertas": 4,
+    "area_km2": 1.584
   },
   {
     "ano": 2024,
@@ -28416,8 +28586,8 @@
     "muni": "Anapu",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.0769
+    "total_alertas": 5,
+    "area_km2": 1.1797
   },
   {
     "ano": 2025,
@@ -28486,8 +28656,8 @@
     "muni": "Aripuana",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.8138
+    "total_alertas": 2,
+    "area_km2": 1.8999
   },
   {
     "ano": 2025,
@@ -29176,8 +29346,8 @@
     "muni": "Prainha",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.6544
+    "total_alertas": 1,
+    "area_km2": 0.0805
   },
   {
     "ano": 2025,
@@ -31886,8 +32056,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 18,
-    "area_km2": 8.9258
+    "total_alertas": 17,
+    "area_km2": 8.8276
   },
   {
     "ano": 2025,
@@ -32148,16 +32318,6 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 2,
     "area_km2": 0.3437
-  },
-  {
-    "ano": 2025,
-    "mes": 5,
-    "periodo": "05/2025",
-    "muni": "Canutama",
-    "uf": "AM",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.4713
   },
   {
     "ano": 2025,
@@ -32486,8 +32646,8 @@
     "muni": "Humaita",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.2637
+    "total_alertas": 1,
+    "area_km2": 0.1747
   },
   {
     "ano": 2025,
@@ -34093,16 +34253,6 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Almeirim",
-    "uf": "PA",
-    "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0764
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Alta Floresta",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
@@ -34126,8 +34276,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 8,
-    "area_km2": 2.33
+    "total_alertas": 5,
+    "area_km2": 1.6403
   },
   {
     "ano": 2025,
@@ -34146,8 +34296,8 @@
     "muni": "Altamira",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 7,
-    "area_km2": 1.4179
+    "total_alertas": 3,
+    "area_km2": 0.3024
   },
   {
     "ano": 2025,
@@ -34166,8 +34316,8 @@
     "muni": "Apiacas",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 1.4334
+    "total_alertas": 4,
+    "area_km2": 1.2976
   },
   {
     "ano": 2025,
@@ -34196,8 +34346,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 4,
-    "area_km2": 1.0293
+    "total_alertas": 3,
+    "area_km2": 0.735
   },
   {
     "ano": 2025,
@@ -34206,8 +34356,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 10,
-    "area_km2": 2.1219
+    "total_alertas": 7,
+    "area_km2": 1.6399
   },
   {
     "ano": 2025,
@@ -34226,8 +34376,8 @@
     "muni": "Aripuana",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.2834
+    "total_alertas": 1,
+    "area_km2": 0.1954
   },
   {
     "ano": 2025,
@@ -34236,8 +34386,8 @@
     "muni": "Aripuana",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 0.9569
+    "total_alertas": 3,
+    "area_km2": 0.694
   },
   {
     "ano": 2025,
@@ -34246,8 +34396,8 @@
     "muni": "Bagre",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 1.9833
+    "total_alertas": 1,
+    "area_km2": 1.8748
   },
   {
     "ano": 2025,
@@ -34345,16 +34495,6 @@
     "periodo": "06/2025",
     "muni": "Borba",
     "uf": "AM",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.2561
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Borba",
-    "uf": "AM",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.4119
@@ -34366,8 +34506,8 @@
     "muni": "Brasnorte",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 1.7465
+    "total_alertas": 1,
+    "area_km2": 0.241
   },
   {
     "ano": 2025,
@@ -34403,31 +34543,11 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Cachoeira do Piria",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.2189
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Cacoal",
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 0.8179
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Calçoene",
-    "uf": "AP",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1142
+    "total_alertas": 3,
+    "area_km2": 0.6582
   },
   {
     "ano": 2025,
@@ -34446,8 +34566,8 @@
     "muni": "Canutama",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 8,
-    "area_km2": 2.5431
+    "total_alertas": 4,
+    "area_km2": 1.2792
   },
   {
     "ano": 2025,
@@ -34456,28 +34576,8 @@
     "muni": "Caracarai",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.5227
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Careiro da Varzea",
-    "uf": "AM",
-    "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.2438
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Centro Novo do Maranhao",
-    "uf": "MA",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.6014
+    "area_km2": 0.3132
   },
   {
     "ano": 2025,
@@ -34493,21 +34593,11 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Cidelandia",
-    "uf": "MA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.089
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Claudia",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 1.5773
+    "total_alertas": 1,
+    "area_km2": 0.4261
   },
   {
     "ano": 2025,
@@ -34516,8 +34606,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 2,
-    "area_km2": 1.4756
+    "total_alertas": 1,
+    "area_km2": 0.2863
   },
   {
     "ano": 2025,
@@ -34526,8 +34616,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 4,
-    "area_km2": 0.4641
+    "total_alertas": 3,
+    "area_km2": 0.2674
   },
   {
     "ano": 2025,
@@ -34546,8 +34636,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "DESMATAMENTO_VEG",
-    "total_alertas": 4,
-    "area_km2": 0.4866
+    "total_alertas": 3,
+    "area_km2": 0.3801
   },
   {
     "ano": 2025,
@@ -34558,16 +34648,6 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 12,
     "area_km2": 5.5491
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Conceiçao do Araguaia",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0679
   },
   {
     "ano": 2025,
@@ -34616,8 +34696,8 @@
     "muni": "Cotriguaçu",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.8668
+    "total_alertas": 1,
+    "area_km2": 0.1286
   },
   {
     "ano": 2025,
@@ -34676,8 +34756,8 @@
     "muni": "Envira",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.3842
+    "total_alertas": 1,
+    "area_km2": 0.0904
   },
   {
     "ano": 2025,
@@ -34726,8 +34806,8 @@
     "muni": "Guajara",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.4007
+    "total_alertas": 1,
+    "area_km2": 0.114
   },
   {
     "ano": 2025,
@@ -34766,8 +34846,8 @@
     "muni": "Humaita",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.7859
+    "total_alertas": 2,
+    "area_km2": 0.2548
   },
   {
     "ano": 2025,
@@ -34826,8 +34906,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 7,
-    "area_km2": 2.1673
+    "total_alertas": 4,
+    "area_km2": 0.3873
   },
   {
     "ano": 2025,
@@ -34838,16 +34918,6 @@
     "classe": "MINERACAO",
     "total_alertas": 2,
     "area_km2": 0.0951
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Itamarati",
-    "uf": "AM",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.1783
   },
   {
     "ano": 2025,
@@ -34873,16 +34943,6 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Itauba",
-    "uf": "MT",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2481
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Itupiranga",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
@@ -34896,8 +34956,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 7,
-    "area_km2": 2.8792
+    "total_alertas": 5,
+    "area_km2": 2.2178
   },
   {
     "ano": 2025,
@@ -34906,8 +34966,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 1.5806
+    "total_alertas": 4,
+    "area_km2": 1.2257
   },
   {
     "ano": 2025,
@@ -34926,8 +34986,8 @@
     "muni": "Juara",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.4569
+    "total_alertas": 1,
+    "area_km2": 0.3921
   },
   {
     "ano": 2025,
@@ -34938,16 +34998,6 @@
     "classe": "CS_DESORDENADO",
     "total_alertas": 1,
     "area_km2": 0.1143
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Juara",
-    "uf": "MT",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2456
   },
   {
     "ano": 2025,
@@ -34996,8 +35046,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 9,
-    "area_km2": 4.9506
+    "total_alertas": 6,
+    "area_km2": 3.4185
   },
   {
     "ano": 2025,
@@ -35036,8 +35086,8 @@
     "muni": "Manicore",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.3112
+    "total_alertas": 1,
+    "area_km2": 0.2262
   },
   {
     "ano": 2025,
@@ -35048,16 +35098,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.4082
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Maraba",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1146
   },
   {
     "ano": 2025,
@@ -35086,8 +35126,8 @@
     "muni": "Marcelandia",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 3.4347
+    "total_alertas": 3,
+    "area_km2": 0.4344
   },
   {
     "ano": 2025,
@@ -35106,8 +35146,8 @@
     "muni": "Maues",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 6,
-    "area_km2": 1.5389
+    "total_alertas": 3,
+    "area_km2": 0.4146
   },
   {
     "ano": 2025,
@@ -35116,8 +35156,8 @@
     "muni": "Medicilandia",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 3.8614
+    "total_alertas": 3,
+    "area_km2": 3.0276
   },
   {
     "ano": 2025,
@@ -35136,8 +35176,8 @@
     "muni": "Moju",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 11,
-    "area_km2": 3.9041
+    "total_alertas": 7,
+    "area_km2": 2.4919
   },
   {
     "ano": 2025,
@@ -35146,8 +35186,8 @@
     "muni": "Moju",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 5,
-    "area_km2": 3.9447
+    "total_alertas": 4,
+    "area_km2": 1.3711
   },
   {
     "ano": 2025,
@@ -35186,8 +35226,8 @@
     "muni": "Nova Bandeirantes",
     "uf": "MT",
     "classe": "CS_DESORDENADO",
-    "total_alertas": 3,
-    "area_km2": 1.0816
+    "total_alertas": 2,
+    "area_km2": 0.7636
   },
   {
     "ano": 2025,
@@ -35208,16 +35248,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.3394
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Nova Canaa do Norte",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.3435
   },
   {
     "ano": 2025,
@@ -35256,8 +35286,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 11,
-    "area_km2": 8.0203
+    "total_alertas": 9,
+    "area_km2": 6.557
   },
   {
     "ano": 2025,
@@ -35296,8 +35326,8 @@
     "muni": "Novo Aripuana",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.7131
+    "total_alertas": 2,
+    "area_km2": 0.3334
   },
   {
     "ano": 2025,
@@ -35306,8 +35336,8 @@
     "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.67
+    "total_alertas": 3,
+    "area_km2": 1.1194
   },
   {
     "ano": 2025,
@@ -35316,8 +35346,8 @@
     "muni": "Novo Repartimento",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 6,
-    "area_km2": 0.8956
+    "total_alertas": 5,
+    "area_km2": 0.811
   },
   {
     "ano": 2025,
@@ -35355,16 +35385,6 @@
     "periodo": "06/2025",
     "muni": "Pacaja",
     "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.4284
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Pacaja",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.2936
@@ -35383,41 +35403,11 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Paragominas",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 1.3267
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Paragominas",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_VEG",
-    "total_alertas": 1,
-    "area_km2": 0.5666
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Paranaita",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 1.3143
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Parauapebas",
-    "uf": "PA",
-    "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
-    "area_km2": 0.1058
+    "area_km2": 0.9083
   },
   {
     "ano": 2025,
@@ -35446,38 +35436,8 @@
     "muni": "Peixoto de Azevedo",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 3,
-    "area_km2": 0.2802
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Peixoto de Azevedo",
-    "uf": "MT",
-    "classe": "CS_GEOMETRICO",
     "total_alertas": 1,
-    "area_km2": 0.5078
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Peixoto de Azevedo",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1156
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Pimenta Bueno",
-    "uf": "RO",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.1461
+    "area_km2": 0.1113
   },
   {
     "ano": 2025,
@@ -35546,18 +35506,8 @@
     "muni": "Porto Velho",
     "uf": "RO",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 9,
-    "area_km2": 1.5815
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Porto dos Gauchos",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 1.714
+    "total_alertas": 8,
+    "area_km2": 1.5098
   },
   {
     "ano": 2025,
@@ -35586,8 +35536,8 @@
     "muni": "Querencia",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.9963
+    "total_alertas": 3,
+    "area_km2": 0.5845
   },
   {
     "ano": 2025,
@@ -35626,8 +35576,8 @@
     "muni": "Rondolandia",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 2.7809
+    "total_alertas": 2,
+    "area_km2": 0.5578
   },
   {
     "ano": 2025,
@@ -35638,16 +35588,6 @@
     "classe": "DEGRADACAO",
     "total_alertas": 2,
     "area_km2": 1.2508
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Rondon do Para",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.2759
   },
   {
     "ano": 2025,
@@ -35696,18 +35636,8 @@
     "muni": "Santana do Araguaia",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.3296
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Santarem",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1867
+    "total_alertas": 3,
+    "area_km2": 0.2632
   },
   {
     "ano": 2025,
@@ -35736,8 +35666,8 @@
     "muni": "Sao Felix do Xingu",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 12,
-    "area_km2": 4.4428
+    "total_alertas": 7,
+    "area_km2": 2.1668
   },
   {
     "ano": 2025,
@@ -35763,26 +35693,6 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Sao Miguel do Guapore",
-    "uf": "RO",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.0859
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Sena Madureira",
-    "uf": "AC",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.2735
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Senador Jose Porfirio",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
@@ -35796,8 +35706,8 @@
     "muni": "Tabapora",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.607
+    "total_alertas": 2,
+    "area_km2": 0.301
   },
   {
     "ano": 2025,
@@ -35806,8 +35716,8 @@
     "muni": "Tailandia",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 11,
-    "area_km2": 4.4307
+    "total_alertas": 9,
+    "area_km2": 3.5532
   },
   {
     "ano": 2025,
@@ -35826,8 +35736,8 @@
     "muni": "Tailandia",
     "uf": "PA",
     "classe": "DESMATAMENTO_VEG",
-    "total_alertas": 2,
-    "area_km2": 0.492
+    "total_alertas": 1,
+    "area_km2": 0.0925
   },
   {
     "ano": 2025,
@@ -35838,16 +35748,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
     "area_km2": 0.3024
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Terra Alta",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0715
   },
   {
     "ano": 2025,
@@ -35903,31 +35803,11 @@
     "ano": 2025,
     "mes": 6,
     "periodo": "06/2025",
-    "muni": "Uniao do Sul",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_VEG",
-    "total_alertas": 1,
-    "area_km2": 0.2314
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
     "muni": "Uruara",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
     "area_km2": 1.5667
-  },
-  {
-    "ano": 2025,
-    "mes": 6,
-    "periodo": "06/2025",
-    "muni": "Vila Bela da Santissima Trindade",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1002
   },
   {
     "ano": 2025,
@@ -36036,8 +35916,8 @@
     "muni": "Almeirim",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.3955
+    "total_alertas": 1,
+    "area_km2": 0.2245
   },
   {
     "ano": 2025,
@@ -36046,8 +35926,8 @@
     "muni": "Almeirim",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.4169
+    "total_alertas": 3,
+    "area_km2": 1.2404
   },
   {
     "ano": 2025,
@@ -36156,8 +36036,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 0.5592
+    "total_alertas": 3,
+    "area_km2": 0.45
   },
   {
     "ano": 2025,
@@ -36238,16 +36118,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
     "area_km2": 0.1733
-  },
-  {
-    "ano": 2025,
-    "mes": 7,
-    "periodo": "07/2025",
-    "muni": "Aveiro",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_VEG",
-    "total_alertas": 1,
-    "area_km2": 0.218
   },
   {
     "ano": 2025,
@@ -36388,16 +36258,6 @@
     "classe": "DEGRADACAO",
     "total_alertas": 1,
     "area_km2": 0.7407
-  },
-  {
-    "ano": 2025,
-    "mes": 7,
-    "periodo": "07/2025",
-    "muni": "Brasnorte",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1799
   },
   {
     "ano": 2025,
@@ -36866,8 +36726,8 @@
     "muni": "Guajara",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.3694
+    "total_alertas": 3,
+    "area_km2": 0.2944
   },
   {
     "ano": 2025,
@@ -37066,8 +36926,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 7,
-    "area_km2": 2.5428
+    "total_alertas": 6,
+    "area_km2": 1.7715
   },
   {
     "ano": 2025,
@@ -37316,8 +37176,8 @@
     "muni": "Manoel Urbano",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 0.7445
+    "total_alertas": 4,
+    "area_km2": 0.5629
   },
   {
     "ano": 2025,
@@ -37566,8 +37426,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 1.076
+    "total_alertas": 1,
+    "area_km2": 0.7179
   },
   {
     "ano": 2025,
@@ -37846,8 +37706,8 @@
     "muni": "Pauini",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.4795
+    "total_alertas": 1,
+    "area_km2": 0.225
   },
   {
     "ano": 2025,
@@ -37936,8 +37796,8 @@
     "muni": "Porto Acre",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1842
+    "total_alertas": 3,
+    "area_km2": 0.2756
   },
   {
     "ano": 2025,
@@ -37956,8 +37816,8 @@
     "muni": "Porto Velho",
     "uf": "RO",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 12,
-    "area_km2": 1.9828
+    "total_alertas": 11,
+    "area_km2": 1.8797
   },
   {
     "ano": 2025,
@@ -37976,8 +37836,8 @@
     "muni": "Porto dos Gauchos",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1534
+    "total_alertas": 1,
+    "area_km2": 0.0857
   },
   {
     "ano": 2025,
@@ -37996,8 +37856,8 @@
     "muni": "Prainha",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 4,
-    "area_km2": 2.2813
+    "total_alertas": 2,
+    "area_km2": 1.1209
   },
   {
     "ano": 2025,
@@ -38476,8 +38336,8 @@
     "muni": "Vila Rica",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.553
+    "total_alertas": 3,
+    "area_km2": 1.0902
   },
   {
     "ano": 2025,
@@ -38658,16 +38518,6 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
     "area_km2": 0.2492
-  },
-  {
-    "ano": 2025,
-    "mes": 8,
-    "periodo": "08/2025",
-    "muni": "Altamira",
-    "uf": "PA",
-    "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 3.0226
   },
   {
     "ano": 2025,
@@ -40206,8 +40056,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 1.3556
+    "total_alertas": 2,
+    "area_km2": 1.2348
   },
   {
     "ano": 2025,
@@ -40226,8 +40076,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 10,
-    "area_km2": 0.6853
+    "total_alertas": 16,
+    "area_km2": 1.0922
   },
   {
     "ano": 2025,
@@ -40306,8 +40156,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 5,
-    "area_km2": 0.7067
+    "total_alertas": 6,
+    "area_km2": 1.5889
   },
   {
     "ano": 2025,
@@ -40326,8 +40176,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.1119
+    "total_alertas": 3,
+    "area_km2": 0.2668
   },
   {
     "ano": 2025,
@@ -40535,6 +40385,16 @@
     "periodo": "08/2025",
     "muni": "Machadinho D'oeste",
     "uf": "RO",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.2089
+  },
+  {
+    "ano": 2025,
+    "mes": 8,
+    "periodo": "08/2025",
+    "muni": "Machadinho D'oeste",
+    "uf": "RO",
     "classe": "DEGRADACAO",
     "total_alertas": 1,
     "area_km2": 0.4453
@@ -40546,8 +40406,8 @@
     "muni": "Machadinho D'oeste",
     "uf": "RO",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 12,
-    "area_km2": 3.293
+    "total_alertas": 11,
+    "area_km2": 2.9122
   },
   {
     "ano": 2025,
@@ -40757,7 +40617,7 @@
     "uf": "AM",
     "classe": "MINERACAO",
     "total_alertas": 1,
-    "area_km2": 0.0689
+    "area_km2": 0.0806
   },
   {
     "ano": 2025,
@@ -40796,8 +40656,8 @@
     "muni": "Melgaço",
     "uf": "PA",
     "classe": "CS_DESORDENADO",
-    "total_alertas": 6,
-    "area_km2": 11.7641
+    "total_alertas": 5,
+    "area_km2": 15.2843
   },
   {
     "ano": 2025,
@@ -41196,8 +41056,8 @@
     "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 8,
-    "area_km2": 3.2091
+    "total_alertas": 4,
+    "area_km2": 1.2863
   },
   {
     "ano": 2025,
@@ -41217,7 +41077,7 @@
     "uf": "PA",
     "classe": "MINERACAO",
     "total_alertas": 2,
-    "area_km2": 0.1827
+    "area_km2": 0.1877
   },
   {
     "ano": 2025,
@@ -42386,8 +42246,8 @@
     "muni": "Tapaua",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 8,
-    "area_km2": 1.0697
+    "total_alertas": 7,
+    "area_km2": 1.009
   },
   {
     "ano": 2025,
@@ -42445,19 +42305,9 @@
     "periodo": "08/2025",
     "muni": "Terra Santa",
     "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 2.6107
-  },
-  {
-    "ano": 2025,
-    "mes": 8,
-    "periodo": "08/2025",
-    "muni": "Terra Santa",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.0646
+    "area_km2": 0.1929
   },
   {
     "ano": 2025,
@@ -42486,8 +42336,8 @@
     "muni": "Trairao",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 7,
-    "area_km2": 1.4626
+    "total_alertas": 6,
+    "area_km2": 1.3305
   },
   {
     "ano": 2025,
@@ -42696,8 +42546,8 @@
     "muni": "Xapuri",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.136
+    "total_alertas": 5,
+    "area_km2": 0.3221
   },
   {
     "ano": 2025,
@@ -42855,16 +42705,6 @@
     "periodo": "09/2025",
     "muni": "Altamira",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 0.7266
-  },
-  {
-    "ano": 2025,
-    "mes": 9,
-    "periodo": "09/2025",
-    "muni": "Altamira",
-    "uf": "PA",
     "classe": "DEGRADACAO",
     "total_alertas": 3,
     "area_km2": 0.6097
@@ -42948,6 +42788,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.4887
+  },
+  {
+    "ano": 2025,
+    "mes": 9,
+    "periodo": "09/2025",
+    "muni": "Apiacas",
+    "uf": "MT",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 2.9408
   },
   {
     "ano": 2025,
@@ -43215,6 +43065,16 @@
     "periodo": "09/2025",
     "muni": "Brasnorte",
     "uf": "MT",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 1.9701
+  },
+  {
+    "ano": 2025,
+    "mes": 9,
+    "periodo": "09/2025",
+    "muni": "Brasnorte",
+    "uf": "MT",
     "classe": "DEGRADACAO",
     "total_alertas": 1,
     "area_km2": 1.0404
@@ -43266,8 +43126,8 @@
     "muni": "Caceres",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 13,
-    "area_km2": 29.7795
+    "total_alertas": 14,
+    "area_km2": 30.7952
   },
   {
     "ano": 2025,
@@ -43516,8 +43376,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 5,
-    "area_km2": 1.959
+    "total_alertas": 6,
+    "area_km2": 2.1095
   },
   {
     "ano": 2025,
@@ -43706,8 +43566,8 @@
     "muni": "Cumaru do Norte",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 7,
-    "area_km2": 8.2969
+    "total_alertas": 6,
+    "area_km2": 8.1138
   },
   {
     "ano": 2025,
@@ -44046,8 +43906,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 0.7586
+    "total_alertas": 4,
+    "area_km2": 0.7587
   },
   {
     "ano": 2025,
@@ -44166,8 +44026,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1776
+    "total_alertas": 3,
+    "area_km2": 0.2953
   },
   {
     "ano": 2025,
@@ -44235,16 +44095,6 @@
     "periodo": "09/2025",
     "muni": "Juruena",
     "uf": "MT",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.27
-  },
-  {
-    "ano": 2025,
-    "mes": 9,
-    "periodo": "09/2025",
-    "muni": "Juruena",
-    "uf": "MT",
     "classe": "DEGRADACAO",
     "total_alertas": 2,
     "area_km2": 0.5299
@@ -44287,7 +44137,7 @@
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
-    "area_km2": 1.2191
+    "area_km2": 0.0657
   },
   {
     "ano": 2025,
@@ -44438,16 +44288,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 1.187
-  },
-  {
-    "ano": 2025,
-    "mes": 9,
-    "periodo": "09/2025",
-    "muni": "Mazagao",
-    "uf": "AP",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 2.7405
   },
   {
     "ano": 2025,
@@ -44756,8 +44596,8 @@
     "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 3,
-    "area_km2": 0.8837
+    "total_alertas": 2,
+    "area_km2": 0.3143
   },
   {
     "ano": 2025,
@@ -44836,8 +44676,8 @@
     "muni": "Oriximina",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 3.143
+    "total_alertas": 1,
+    "area_km2": 0.2969
   },
   {
     "ano": 2025,
@@ -45026,8 +44866,8 @@
     "muni": "Pimenteiras do Oeste",
     "uf": "RO",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 0.3994
+    "total_alertas": 2,
+    "area_km2": 1.7735
   },
   {
     "ano": 2025,
@@ -45048,16 +44888,6 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
     "area_km2": 0.0491
-  },
-  {
-    "ano": 2025,
-    "mes": 9,
-    "periodo": "09/2025",
-    "muni": "Placas",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0892
   },
   {
     "ano": 2025,
@@ -45406,8 +45236,8 @@
     "muni": "Ruropolis",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.2399
+    "total_alertas": 3,
+    "area_km2": 0.2383
   },
   {
     "ano": 2025,
@@ -45616,8 +45446,8 @@
     "muni": "Sao Felix do Xingu",
     "uf": "PA",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.3837
+    "total_alertas": 1,
+    "area_km2": 0.1105
   },
   {
     "ano": 2025,
@@ -45763,6 +45593,16 @@
     "ano": 2025,
     "mes": 9,
     "periodo": "09/2025",
+    "muni": "Silves",
+    "uf": "AM",
+    "classe": "CS_DESORDENADO",
+    "total_alertas": 1,
+    "area_km2": 0.2045
+  },
+  {
+    "ano": 2025,
+    "mes": 9,
+    "periodo": "09/2025",
     "muni": "Sinop",
     "uf": "MT",
     "classe": "CICATRIZ_DE_QUEIMADA",
@@ -45848,16 +45688,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.3992
-  },
-  {
-    "ano": 2025,
-    "mes": 9,
-    "periodo": "09/2025",
-    "muni": "Tapurah",
-    "uf": "MT",
-    "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 5.1797
   },
   {
     "ano": 2025,
@@ -46165,6 +45995,16 @@
     "periodo": "10/2025",
     "muni": "Altamira",
     "uf": "PA",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.2414
+  },
+  {
+    "ano": 2025,
+    "mes": 10,
+    "periodo": "10/2025",
+    "muni": "Altamira",
+    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
     "area_km2": 0.2983
@@ -46286,8 +46126,8 @@
     "muni": "Assis Brasil",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 0.4861
+    "total_alertas": 3,
+    "area_km2": 0.3599
   },
   {
     "ano": 2025,
@@ -46318,16 +46158,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.0985
-  },
-  {
-    "ano": 2025,
-    "mes": 10,
-    "periodo": "10/2025",
-    "muni": "Barcelos",
-    "uf": "AM",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 1.8153
   },
   {
     "ano": 2025,
@@ -46426,8 +46256,8 @@
     "muni": "Brasileia",
     "uf": "AC",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.2834
+    "total_alertas": 2,
+    "area_km2": 0.1973
   },
   {
     "ano": 2025,
@@ -46527,7 +46357,7 @@
     "uf": "RO",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 2,
-    "area_km2": 4.2121
+    "area_km2": 3.3788
   },
   {
     "ano": 2025,
@@ -46568,16 +46398,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.1763
-  },
-  {
-    "ano": 2025,
-    "mes": 10,
-    "periodo": "10/2025",
-    "muni": "Canutama",
-    "uf": "AM",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.2267
   },
   {
     "ano": 2025,
@@ -46638,16 +46458,6 @@
     "classe": "DEGRADACAO",
     "total_alertas": 2,
     "area_km2": 7.3731
-  },
-  {
-    "ano": 2025,
-    "mes": 10,
-    "periodo": "10/2025",
-    "muni": "Claudia",
-    "uf": "MT",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.433
   },
   {
     "ano": 2025,
@@ -46793,6 +46603,16 @@
     "ano": 2025,
     "mes": 10,
     "periodo": "10/2025",
+    "muni": "Epitaciolandia",
+    "uf": "AC",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.1554
+  },
+  {
+    "ano": 2025,
+    "mes": 10,
+    "periodo": "10/2025",
     "muni": "Feijo",
     "uf": "AC",
     "classe": "CS_DESORDENADO",
@@ -46867,7 +46687,7 @@
     "uf": "RO",
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
-    "area_km2": 0.6664
+    "area_km2": 0.2171
   },
   {
     "ano": 2025,
@@ -46886,8 +46706,8 @@
     "muni": "Gurupa",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 1.7222
+    "total_alertas": 3,
+    "area_km2": 2.3214
   },
   {
     "ano": 2025,
@@ -46945,9 +46765,9 @@
     "periodo": "10/2025",
     "muni": "Itaituba",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
+    "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 7.7202
+    "area_km2": 1.516
   },
   {
     "ano": 2025,
@@ -46966,8 +46786,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 2,
-    "area_km2": 0.1436
+    "total_alertas": 3,
+    "area_km2": 0.3396
   },
   {
     "ano": 2025,
@@ -47026,8 +46846,8 @@
     "muni": "Japura",
     "uf": "AM",
     "classe": "MINERACAO",
-    "total_alertas": 2,
-    "area_km2": 0.1957
+    "total_alertas": 3,
+    "area_km2": 0.2939
   },
   {
     "ano": 2025,
@@ -47085,16 +46905,6 @@
     "periodo": "10/2025",
     "muni": "Juina",
     "uf": "MT",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 0.7132
-  },
-  {
-    "ano": 2025,
-    "mes": 10,
-    "periodo": "10/2025",
-    "muni": "Juina",
-    "uf": "MT",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 1,
     "area_km2": 0.9754
@@ -47106,8 +46916,8 @@
     "muni": "Juina",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 0.3569
+    "total_alertas": 4,
+    "area_km2": 1.3628
   },
   {
     "ano": 2025,
@@ -47146,8 +46956,8 @@
     "muni": "Labrea",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 10,
-    "area_km2": 1.8834
+    "total_alertas": 11,
+    "area_km2": 1.8934
   },
   {
     "ano": 2025,
@@ -47166,8 +46976,8 @@
     "muni": "Manicore",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0305
+    "total_alertas": 2,
+    "area_km2": 3.2351
   },
   {
     "ano": 2025,
@@ -47376,8 +47186,8 @@
     "muni": "Novo Airao",
     "uf": "AM",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 0.246
+    "total_alertas": 3,
+    "area_km2": 0.5743
   },
   {
     "ano": 2025,
@@ -47406,8 +47216,8 @@
     "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 4,
-    "area_km2": 1.7057
+    "total_alertas": 3,
+    "area_km2": 0.6264
   },
   {
     "ano": 2025,
@@ -47995,6 +47805,16 @@
     "periodo": "10/2025",
     "muni": "Sao Francisco do Guapore",
     "uf": "RO",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 1.3868
+  },
+  {
+    "ano": 2025,
+    "mes": 10,
+    "periodo": "10/2025",
+    "muni": "Sao Francisco do Guapore",
+    "uf": "RO",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.0646
@@ -48253,16 +48073,6 @@
     "ano": 2025,
     "mes": 10,
     "periodo": "10/2025",
-    "muni": "Vitoria do Jari",
-    "uf": "AP",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 2,
-    "area_km2": 2.2005
-  },
-  {
-    "ano": 2025,
-    "mes": 10,
-    "periodo": "10/2025",
     "muni": "Xapuri",
     "uf": "AC",
     "classe": "CS_DESORDENADO",
@@ -48335,29 +48145,9 @@
     "periodo": "11/2025",
     "muni": "Altamira",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 2,
-    "area_km2": 12.3583
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Altamira",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.1145
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Altamira",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 8,
-    "area_km2": 0.962
+    "total_alertas": 9,
+    "area_km2": 1.0179
   },
   {
     "ano": 2025,
@@ -48426,8 +48216,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.3268
+    "total_alertas": 1,
+    "area_km2": 0.1532
   },
   {
     "ano": 2025,
@@ -48556,8 +48346,8 @@
     "muni": "Baiao",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1904
+    "total_alertas": 3,
+    "area_km2": 0.4537
   },
   {
     "ano": 2025,
@@ -48716,8 +48506,8 @@
     "muni": "Caroebe",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 0.4877
+    "total_alertas": 6,
+    "area_km2": 0.5912
   },
   {
     "ano": 2025,
@@ -48825,16 +48615,6 @@
     "periodo": "11/2025",
     "muni": "Faro",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 3.587
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Faro",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.1183
@@ -48885,29 +48665,9 @@
     "periodo": "11/2025",
     "muni": "Itaituba",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 1.1902
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Itaituba",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 3,
     "area_km2": 0.3299
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Itaituba",
-    "uf": "PA",
-    "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0794
   },
   {
     "ano": 2025,
@@ -49046,8 +48806,8 @@
     "muni": "Medicilandia",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 7,
-    "area_km2": 1.096
+    "total_alertas": 8,
+    "area_km2": 1.1745
   },
   {
     "ano": 2025,
@@ -49405,6 +49165,16 @@
     "periodo": "11/2025",
     "muni": "Prainha",
     "uf": "PA",
+    "classe": "CICATRIZ_DE_QUEIMADA",
+    "total_alertas": 1,
+    "area_km2": 0.656
+  },
+  {
+    "ano": 2025,
+    "mes": 11,
+    "periodo": "11/2025",
+    "muni": "Prainha",
+    "uf": "PA",
     "classe": "DEGRADACAO",
     "total_alertas": 2,
     "area_km2": 5.9098
@@ -49487,7 +49257,7 @@
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 5,
-    "area_km2": 0.3811
+    "area_km2": 0.3749
   },
   {
     "ano": 2025,
@@ -49548,16 +49318,6 @@
     "classe": "CICATRIZ_DE_QUEIMADA",
     "total_alertas": 1,
     "area_km2": 0.0782
-  },
-  {
-    "ano": 2025,
-    "mes": 11,
-    "periodo": "11/2025",
-    "muni": "Sao Felix do Xingu",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2604
   },
   {
     "ano": 2025,
@@ -49646,8 +49406,8 @@
     "muni": "Terra Santa",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0934
+    "total_alertas": 2,
+    "area_km2": 0.1956
   },
   {
     "ano": 2025,
@@ -49866,8 +49626,8 @@
     "muni": "Aveiro",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0948
+    "total_alertas": 2,
+    "area_km2": 0.1756
   },
   {
     "ano": 2025,
@@ -50216,8 +49976,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 3,
-    "area_km2": 0.2241
+    "total_alertas": 4,
+    "area_km2": 0.248
   },
   {
     "ano": 2025,
@@ -50236,8 +49996,8 @@
     "muni": "Jacareacanga",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 3,
-    "area_km2": 0.1611
+    "total_alertas": 2,
+    "area_km2": 0.1584
   },
   {
     "ano": 2025,
@@ -50693,16 +50453,6 @@
     "ano": 2025,
     "mes": 12,
     "periodo": "12/2025",
-    "muni": "Vitoria do Jari",
-    "uf": "AP",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.9428
-  },
-  {
-    "ano": 2025,
-    "mes": 12,
-    "periodo": "12/2025",
     "muni": "obidos",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
@@ -50903,16 +50653,6 @@
     "ano": 2026,
     "mes": 1,
     "periodo": "01/2026",
-    "muni": "Belterra",
-    "uf": "PA",
-    "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 1.4234
-  },
-  {
-    "ano": 2026,
-    "mes": 1,
-    "periodo": "01/2026",
     "muni": "Beruri",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
@@ -50935,19 +50675,9 @@
     "periodo": "01/2026",
     "muni": "Bom Jardim",
     "uf": "MA",
-    "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.245
-  },
-  {
-    "ano": 2026,
-    "mes": 1,
-    "periodo": "01/2026",
-    "muni": "Bom Jardim",
-    "uf": "MA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 0.8916
+    "total_alertas": 8,
+    "area_km2": 1.2504
   },
   {
     "ano": 2026,
@@ -51195,9 +50925,19 @@
     "periodo": "01/2026",
     "muni": "Itaituba",
     "uf": "PA",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 1.2356
+  },
+  {
+    "ano": 2026,
+    "mes": 1,
+    "periodo": "01/2026",
+    "muni": "Itaituba",
+    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1683
+    "total_alertas": 1,
+    "area_km2": 0.0989
   },
   {
     "ano": 2026,
@@ -51206,8 +50946,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 3,
-    "area_km2": 0.2142
+    "total_alertas": 2,
+    "area_km2": 0.133
   },
   {
     "ano": 2026,
@@ -51477,7 +51217,7 @@
     "uf": "PA",
     "classe": "MINERACAO",
     "total_alertas": 2,
-    "area_km2": 0.177
+    "area_km2": 0.2427
   },
   {
     "ano": 2026,
@@ -51768,6 +51508,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.0776
+  },
+  {
+    "ano": 2026,
+    "mes": 1,
+    "periodo": "01/2026",
+    "muni": "Sao Jose do Rio Claro",
+    "uf": "MT",
+    "classe": "CS_GEOMETRICO",
+    "total_alertas": 1,
+    "area_km2": 3.1868
   },
   {
     "ano": 2026,
@@ -52206,8 +51956,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1738
+    "total_alertas": 1,
+    "area_km2": 0.0672
   },
   {
     "ano": 2026,
@@ -52228,6 +51978,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.0676
+  },
+  {
+    "ano": 2026,
+    "mes": 2,
+    "periodo": "02/2026",
+    "muni": "Jacareacanga",
+    "uf": "PA",
+    "classe": "MINERACAO",
+    "total_alertas": 1,
+    "area_km2": 0.0912
   },
   {
     "ano": 2026,
@@ -52258,16 +52018,6 @@
     "classe": "MINERACAO",
     "total_alertas": 1,
     "area_km2": 0.0754
-  },
-  {
-    "ano": 2026,
-    "mes": 2,
-    "periodo": "02/2026",
-    "muni": "Juruti",
-    "uf": "PA",
-    "classe": "CS_DESORDENADO",
-    "total_alertas": 1,
-    "area_km2": 2.542
   },
   {
     "ano": 2026,
@@ -52328,16 +52078,6 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
     "area_km2": 0.2886
-  },
-  {
-    "ano": 2026,
-    "mes": 2,
-    "periodo": "02/2026",
-    "muni": "Maues",
-    "uf": "AM",
-    "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0955
   },
   {
     "ano": 2026,
@@ -52406,18 +52146,8 @@
     "muni": "Novo Repartimento",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.9174
-  },
-  {
-    "ano": 2026,
-    "mes": 2,
-    "periodo": "02/2026",
-    "muni": "Pacaja",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0033
+    "total_alertas": 3,
+    "area_km2": 1.8247
   },
   {
     "ano": 2026,
@@ -52645,16 +52375,6 @@
     "periodo": "03/2026",
     "muni": "Altamira",
     "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.106
-  },
-  {
-    "ano": 2026,
-    "mes": 3,
-    "periodo": "03/2026",
-    "muni": "Altamira",
-    "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
     "area_km2": 0.1378
@@ -52825,6 +52545,16 @@
     "periodo": "03/2026",
     "muni": "Canta",
     "uf": "RR",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.2055
+  },
+  {
+    "ano": 2026,
+    "mes": 3,
+    "periodo": "03/2026",
+    "muni": "Canta",
+    "uf": "RR",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 6,
     "area_km2": 0.9933
@@ -52845,9 +52575,19 @@
     "periodo": "03/2026",
     "muni": "Caracarai",
     "uf": "RR",
-    "classe": "DEGRADACAO",
+    "classe": "CS_DESORDENADO",
     "total_alertas": 1,
-    "area_km2": 0.1534
+    "area_km2": 1.6226
+  },
+  {
+    "ano": 2026,
+    "mes": 3,
+    "periodo": "03/2026",
+    "muni": "Caracarai",
+    "uf": "RR",
+    "classe": "DEGRADACAO",
+    "total_alertas": 2,
+    "area_km2": 0.2928
   },
   {
     "ano": 2026,
@@ -53073,6 +52813,16 @@
     "ano": 2026,
     "mes": 3,
     "periodo": "03/2026",
+    "muni": "Itaituba",
+    "uf": "PA",
+    "classe": "MINERACAO",
+    "total_alertas": 2,
+    "area_km2": 0.2078
+  },
+  {
+    "ano": 2026,
+    "mes": 3,
+    "periodo": "03/2026",
     "muni": "Itanhanga",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
@@ -53265,16 +53015,6 @@
     "periodo": "03/2026",
     "muni": "Mucajai",
     "uf": "RR",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.1564
-  },
-  {
-    "ano": 2026,
-    "mes": 3,
-    "periodo": "03/2026",
-    "muni": "Mucajai",
-    "uf": "RR",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 15,
     "area_km2": 1.8844
@@ -53348,6 +53088,16 @@
     "classe": "DEGRADACAO",
     "total_alertas": 1,
     "area_km2": 2.1017
+  },
+  {
+    "ano": 2026,
+    "mes": 3,
+    "periodo": "03/2026",
+    "muni": "Oriximina",
+    "uf": "PA",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.1359
   },
   {
     "ano": 2026,
@@ -53458,6 +53208,16 @@
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
     "area_km2": 0.2507
+  },
+  {
+    "ano": 2026,
+    "mes": 3,
+    "periodo": "03/2026",
+    "muni": "Porto Velho",
+    "uf": "RO",
+    "classe": "MINERACAO",
+    "total_alertas": 1,
+    "area_km2": 0.0076
   },
   {
     "ano": 2026,
@@ -53666,8 +53426,8 @@
     "muni": "Terra Santa",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0982
+    "total_alertas": 2,
+    "area_km2": 0.3639
   },
   {
     "ano": 2026,
@@ -53733,51 +53493,41 @@
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Acara",
+    "muni": "Altamira",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.102
+    "total_alertas": 4,
+    "area_km2": 0.8473
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Alta Floresta D'oeste",
+    "muni": "Altamira",
+    "uf": "PA",
+    "classe": "MINERACAO",
+    "total_alertas": 1,
+    "area_km2": 0.0698
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Alto Paraiso",
     "uf": "RO",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.0639
+    "area_km2": 0.098
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Altamira",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0003
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Altamira",
-    "uf": "PA",
+    "muni": "Apiacas",
+    "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.6231
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Amajari",
-    "uf": "RR",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.1432
+    "total_alertas": 2,
+    "area_km2": 0.359
   },
   {
     "ano": 2026,
@@ -53786,8 +53536,8 @@
     "muni": "Apui",
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 7.5432
+    "total_alertas": 3,
+    "area_km2": 1.0167
   },
   {
     "ano": 2026,
@@ -53805,9 +53555,9 @@
     "periodo": "04/2026",
     "muni": "Aripuana",
     "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
+    "classe": "CS_DESORDENADO",
     "total_alertas": 1,
-    "area_km2": 0.0944
+    "area_km2": 2.6463
   },
   {
     "ano": 2026,
@@ -53815,9 +53565,19 @@
     "periodo": "04/2026",
     "muni": "Aripuana",
     "uf": "MT",
-    "classe": "MINERACAO",
+    "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 0.1752
+    "area_km2": 0.1217
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Aripuana",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 2,
+    "area_km2": 0.4747
   },
   {
     "ano": 2026,
@@ -53827,17 +53587,27 @@
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
-    "area_km2": 0.1321
+    "area_km2": 0.1916
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Barra do Bugres",
-    "uf": "MT",
+    "muni": "Boca do Acre",
+    "uf": "AM",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 2,
+    "area_km2": 0.2228
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Bom Jardim",
+    "uf": "MA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.0773
+    "area_km2": 0.2962
   },
   {
     "ano": 2026,
@@ -53853,11 +53623,21 @@
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
+    "muni": "Brasil Novo",
+    "uf": "PA",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.5468
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
     "muni": "Brasnorte",
     "uf": "MT",
-    "classe": "CS_GEOMETRICO",
+    "classe": "CS_DESORDENADO",
     "total_alertas": 1,
-    "area_km2": 1.1707
+    "area_km2": 0.6582
   },
   {
     "ano": 2026,
@@ -53866,18 +53646,18 @@
     "muni": "Brasnorte",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 1.8408
+    "total_alertas": 1,
+    "area_km2": 0.4793
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Brasnorte",
-    "uf": "MT",
+    "muni": "Cacaulandia",
+    "uf": "RO",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.9249
+    "total_alertas": 1,
+    "area_km2": 0.109
   },
   {
     "ano": 2026,
@@ -53906,8 +53686,8 @@
     "muni": "Canta",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.6699
+    "total_alertas": 1,
+    "area_km2": 0.0736
   },
   {
     "ano": 2026,
@@ -53926,18 +53706,28 @@
     "muni": "Caracarai",
     "uf": "RR",
     "classe": "CICATRIZ_DE_QUEIMADA",
-    "total_alertas": 1,
-    "area_km2": 0.4976
+    "total_alertas": 2,
+    "area_km2": 0.7557
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Caracarai",
+    "muni": "Caroebe",
     "uf": "RR",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.3007
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Claudia",
+    "uf": "MT",
     "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 0.239
+    "area_km2": 0.2321
   },
   {
     "ano": 2026,
@@ -53956,8 +53746,8 @@
     "muni": "Colniza",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 1.164
+    "total_alertas": 9,
+    "area_km2": 2.1225
   },
   {
     "ano": 2026,
@@ -53966,8 +53756,28 @@
     "muni": "Comodoro",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.1799
+    "total_alertas": 1,
+    "area_km2": 0.0848
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Conceiçao do Araguaia",
+    "uf": "PA",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.1227
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Corumbiara",
+    "uf": "RO",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.0773
   },
   {
     "ano": 2026,
@@ -53986,8 +53796,8 @@
     "muni": "Cumaru do Norte",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.5675
+    "total_alertas": 1,
+    "area_km2": 0.1428
   },
   {
     "ano": 2026,
@@ -54005,9 +53815,9 @@
     "periodo": "04/2026",
     "muni": "Dom Eliseu",
     "uf": "PA",
-    "classe": "CS_DESORDENADO",
+    "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 1.5362
+    "area_km2": 0.2565
   },
   {
     "ano": 2026,
@@ -54017,7 +53827,7 @@
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 1,
-    "area_km2": 1.542
+    "area_km2": 2.6205
   },
   {
     "ano": 2026,
@@ -54026,8 +53836,28 @@
     "muni": "Feliz Natal",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 3,
-    "area_km2": 2.3168
+    "total_alertas": 10,
+    "area_km2": 20.1616
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Feliz Natal",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.0798
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Humaita",
+    "uf": "AM",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 1.0317
   },
   {
     "ano": 2026,
@@ -54046,8 +53876,8 @@
     "muni": "Itaituba",
     "uf": "PA",
     "classe": "MINERACAO",
-    "total_alertas": 5,
-    "area_km2": 0.3377
+    "total_alertas": 3,
+    "area_km2": 0.2411
   },
   {
     "ano": 2026,
@@ -54056,28 +53886,8 @@
     "muni": "Itanhanga",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 4,
-    "area_km2": 1.3948
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Itauba",
-    "uf": "MT",
-    "classe": "CS_GEOMETRICO",
-    "total_alertas": 1,
-    "area_km2": 3.654
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Itauba",
-    "uf": "MT",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 3.04
+    "total_alertas": 2,
+    "area_km2": 1.0228
   },
   {
     "ano": 2026,
@@ -54085,9 +53895,19 @@
     "periodo": "04/2026",
     "muni": "Jacareacanga",
     "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.3094
+    "classe": "MINERACAO",
+    "total_alertas": 1,
+    "area_km2": 0.0867
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Juara",
+    "uf": "MT",
+    "classe": "CS_DESORDENADO",
+    "total_alertas": 1,
+    "area_km2": 2.146
   },
   {
     "ano": 2026,
@@ -54096,8 +53916,8 @@
     "muni": "Juara",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2614
+    "total_alertas": 2,
+    "area_km2": 1.036
   },
   {
     "ano": 2026,
@@ -54116,8 +53936,8 @@
     "muni": "Juina",
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 3,
-    "area_km2": 15.984
+    "total_alertas": 2,
+    "area_km2": 8.0902
   },
   {
     "ano": 2026,
@@ -54126,8 +53946,8 @@
     "muni": "Juina",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 4,
-    "area_km2": 3.3804
+    "total_alertas": 1,
+    "area_km2": 0.5667
   },
   {
     "ano": 2026,
@@ -54136,8 +53956,38 @@
     "muni": "Juruti",
     "uf": "PA",
     "classe": "CS_GEOMETRICO",
+    "total_alertas": 2,
+    "area_km2": 1.7845
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Juruti",
+    "uf": "PA",
+    "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.5745
+    "area_km2": 0.1087
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Lambari D'oeste",
+    "uf": "MT",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.1357
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Lambari D'oeste",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.04
   },
   {
     "ano": 2026,
@@ -54147,7 +53997,7 @@
     "uf": "AM",
     "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 0.1381
+    "area_km2": 0.0931
   },
   {
     "ano": 2026,
@@ -54157,7 +54007,7 @@
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 4,
-    "area_km2": 22.0628
+    "area_km2": 22.5737
   },
   {
     "ano": 2026,
@@ -54166,18 +54016,8 @@
     "muni": "Marcelandia",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.8613
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Maues",
-    "uf": "AM",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.7288
+    "total_alertas": 5,
+    "area_km2": 4.1755
   },
   {
     "ano": 2026,
@@ -54187,7 +54027,7 @@
     "uf": "AM",
     "classe": "MINERACAO",
     "total_alertas": 1,
-    "area_km2": 0.0055
+    "area_km2": 0.105
   },
   {
     "ano": 2026,
@@ -54206,8 +54046,18 @@
     "muni": "Nova Bandeirantes",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
+    "total_alertas": 2,
+    "area_km2": 0.3946
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Nova Canaa do Norte",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.7688
+    "area_km2": 0.1376
   },
   {
     "ano": 2026,
@@ -54215,9 +54065,9 @@
     "periodo": "04/2026",
     "muni": "Nova Lacerda",
     "uf": "MT",
-    "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0706
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 2,
+    "area_km2": 0.2132
   },
   {
     "ano": 2026,
@@ -54226,8 +54076,8 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 2,
-    "area_km2": 6.7431
+    "total_alertas": 1,
+    "area_km2": 5.7612
   },
   {
     "ano": 2026,
@@ -54236,28 +54086,18 @@
     "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 2,
-    "area_km2": 0.7515
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Nova Mutum",
-    "uf": "MT",
-    "classe": "CS_GEOMETRICO",
     "total_alertas": 1,
-    "area_km2": 1.154
+    "area_km2": 0.5221
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Nova Mutum",
+    "muni": "Nova Maringa",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 1.3872
+    "total_alertas": 3,
+    "area_km2": 2.2583
   },
   {
     "ano": 2026,
@@ -54275,19 +54115,9 @@
     "periodo": "04/2026",
     "muni": "Nova Ubirata",
     "uf": "MT",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.251
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Nova Ubirata",
-    "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 5,
-    "area_km2": 1.8173
+    "total_alertas": 3,
+    "area_km2": 1.341
   },
   {
     "ano": 2026,
@@ -54307,7 +54137,7 @@
     "uf": "AM",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 2,
-    "area_km2": 0.7033
+    "area_km2": 0.9709
   },
   {
     "ano": 2026,
@@ -54333,31 +54163,11 @@
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Ourilandia do Norte",
+    "muni": "Novo Progresso",
     "uf": "PA",
     "classe": "MINERACAO",
     "total_alertas": 1,
-    "area_km2": 0.1073
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Paragominas",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2903
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Paragominas",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.479
+    "area_km2": 0.0675
   },
   {
     "ano": 2026,
@@ -54367,7 +54177,17 @@
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 3,
-    "area_km2": 5.3903
+    "area_km2": 9.545
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Paranatinga",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_CR",
+    "total_alertas": 1,
+    "area_km2": 0.0988
   },
   {
     "ano": 2026,
@@ -54383,21 +54203,21 @@
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Pimenteiras do Oeste",
-    "uf": "RO",
-    "classe": "DESMATAMENTO_CR",
+    "muni": "Pontes E Lacerda",
+    "uf": "MT",
+    "classe": "MINERACAO",
     "total_alertas": 1,
-    "area_km2": 0.1138
+    "area_km2": 0.3652
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Pontes E Lacerda",
+    "muni": "Porto Esperidiao",
     "uf": "MT",
-    "classe": "MINERACAO",
+    "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.1302
+    "area_km2": 0.1122
   },
   {
     "ano": 2026,
@@ -54426,18 +54246,18 @@
     "muni": "Porto dos Gauchos",
     "uf": "MT",
     "classe": "DEGRADACAO",
-    "total_alertas": 7,
-    "area_km2": 20.6587
+    "total_alertas": 3,
+    "area_km2": 8.8504
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Porto dos Gauchos",
-    "uf": "MT",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 2,
-    "area_km2": 0.3724
+    "muni": "Prainha",
+    "uf": "PA",
+    "classe": "DESMATAMENTO_VEG",
+    "total_alertas": 1,
+    "area_km2": 0.2525
   },
   {
     "ano": 2026,
@@ -54446,38 +54266,18 @@
     "muni": "Querencia",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0918
+    "total_alertas": 2,
+    "area_km2": 0.1629
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Rio Branco",
-    "uf": "AC",
-    "classe": "DESMATAMENTO_CR",
+    "muni": "Querencia",
+    "uf": "MT",
+    "classe": "DESMATAMENTO_VEG",
     "total_alertas": 1,
-    "area_km2": 0.104
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Rio Preto da Eva",
-    "uf": "AM",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0989
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Rondon do Para",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 0.2173
+    "area_km2": 0.0999
   },
   {
     "ano": 2026,
@@ -54487,7 +54287,7 @@
     "uf": "RR",
     "classe": "CS_GEOMETRICO",
     "total_alertas": 2,
-    "area_km2": 1.0457
+    "area_km2": 2.234
   },
   {
     "ano": 2026,
@@ -54496,8 +54296,8 @@
     "muni": "Rorainopolis",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0791
+    "total_alertas": 2,
+    "area_km2": 0.2583
   },
   {
     "ano": 2026,
@@ -54506,8 +54306,8 @@
     "muni": "Santa Carmem",
     "uf": "MT",
     "classe": "CS_GEOMETRICO",
-    "total_alertas": 5,
-    "area_km2": 7.3629
+    "total_alertas": 3,
+    "area_km2": 4.8985
   },
   {
     "ano": 2026,
@@ -54517,7 +54317,7 @@
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.0707
+    "area_km2": 0.6378
   },
   {
     "ano": 2026,
@@ -54527,27 +54327,7 @@
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.1197
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Santarem",
-    "uf": "PA",
-    "classe": "DEGRADACAO",
-    "total_alertas": 1,
-    "area_km2": 1.5551
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Santarem",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.0674
+    "area_km2": 0.0025
   },
   {
     "ano": 2026,
@@ -54557,7 +54337,7 @@
     "uf": "PA",
     "classe": "DEGRADACAO",
     "total_alertas": 2,
-    "area_km2": 0.9935
+    "area_km2": 0.3205
   },
   {
     "ano": 2026,
@@ -54566,28 +54346,18 @@
     "muni": "Sao Felix do Xingu",
     "uf": "PA",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 6,
-    "area_km2": 1.0651
+    "total_alertas": 4,
+    "area_km2": 0.5533
   },
   {
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Sao Francisco do Guapore",
-    "uf": "RO",
-    "classe": "CICATRIZ_DE_QUEIMADA",
+    "muni": "Sao Joao da Baliza",
+    "uf": "RR",
+    "classe": "DEGRADACAO",
     "total_alertas": 1,
-    "area_km2": 2.2013
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Sao Joao do Araguaia",
-    "uf": "PA",
-    "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.5038
+    "area_km2": 0.6791
   },
   {
     "ano": 2026,
@@ -54596,8 +54366,8 @@
     "muni": "Sao Jose do Rio Claro",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.43
+    "total_alertas": 4,
+    "area_km2": 2.0785
   },
   {
     "ano": 2026,
@@ -54606,8 +54376,8 @@
     "muni": "Sao Luiz",
     "uf": "RR",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 1,
-    "area_km2": 0.2427
+    "total_alertas": 2,
+    "area_km2": 0.5387
   },
   {
     "ano": 2026,
@@ -54653,11 +54423,11 @@
     "ano": 2026,
     "mes": 4,
     "periodo": "04/2026",
-    "muni": "Tome-Açu",
-    "uf": "PA",
+    "muni": "Tapurah",
+    "uf": "MT",
     "classe": "DESMATAMENTO_CR",
     "total_alertas": 1,
-    "area_km2": 0.0969
+    "area_km2": 0.1557
   },
   {
     "ano": 2026,
@@ -54668,16 +54438,6 @@
     "classe": "DESMATAMENTO_VEG",
     "total_alertas": 1,
     "area_km2": 0.1506
-  },
-  {
-    "ano": 2026,
-    "mes": 4,
-    "periodo": "04/2026",
-    "muni": "Trairao",
-    "uf": "PA",
-    "classe": "MINERACAO",
-    "total_alertas": 1,
-    "area_km2": 0.0693
   },
   {
     "ano": 2026,
@@ -54696,8 +54456,18 @@
     "muni": "Uniao do Sul",
     "uf": "MT",
     "classe": "DESMATAMENTO_CR",
-    "total_alertas": 3,
-    "area_km2": 0.4629
+    "total_alertas": 2,
+    "area_km2": 0.2326
+  },
+  {
+    "ano": 2026,
+    "mes": 4,
+    "periodo": "04/2026",
+    "muni": "Uruara",
+    "uf": "PA",
+    "classe": "DEGRADACAO",
+    "total_alertas": 1,
+    "area_km2": 0.216
   },
   {
     "ano": 2026,

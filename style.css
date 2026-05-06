@@ -91,7 +91,7 @@ input { display: none; }
         height: auto;
         padding: 12px 0;
     }
-
+    
     .header-content {
         flex-direction: column;
         align-items: flex-start;
@@ -148,7 +148,7 @@ input { display: none; }
     .class-filters-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .title-wrapper h1 {
         font-size: 18px;
     }

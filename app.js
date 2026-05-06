@@ -4,7 +4,7 @@ const map = L.map('map').setView([-10, -55], 5);
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom: 19,
-    attribution: '&copy; CARTO | Dados: INPE (DETER) | Elaborado por <a href="https://github.com/vagnertxr" target="_blank">Vagner Teixeira</a>'
+    attribution: '&copy; CARTO | Dados: DETER (INPE) | Elaborado por <a href="https://github.com/vagnertxr" target="_blank">Vagner Teixeira</a>'
 }).addTo(map);
 
 // Estado global da aplicação
@@ -80,26 +80,18 @@ function estiloAlerta(feature) {
     };
 }
 
-function estiloKde(feature) {
-    const level = parseFloat(feature.properties.level || feature.properties.level_1 || 0);
-    let color = '#f59e0b'; let weight = 1;
-    if (level > 4e-9) { color = '#b91c1c'; weight = 3; } 
-    else if (level > 2.5e-9) { color = '#ef4444'; weight = 2; } 
-    else if (level > 1e-9) { color = '#f97316'; weight = 1.5; } 
-    return { color: color, weight: weight, opacity: 0.8, fillOpacity: 0 };
-}
-
 function onEachFeatureAlertas(feature, layer) {
     const p = feature.properties;
     // O campo area_uc_km só preenche se for UC, usamos areamunkm para área do polígono
     const area = p.areamunkm ? parseFloat(p.areamunkm) : (p.areauckm ? parseFloat(p.areauckm) : 0);
     const labelClasse = classLabels[p.classname] || p.classname || 'Outros';
-    
+    const areaHa = area * 100;
+
     layer.bindPopup(`
         <div class="popup-title">Alerta DETER</div>
-        <b>Muni:</b> ${p.name_muni || 'N/A'} - ${p.abbrev_state || ''}<br/>
+        <b>Município:</b> ${p.name_muni || 'N/A'} - ${p.abbrev_state || ''}<br/>
         <b>Classe:</b> ${labelClasse}<br/>
-        <b>Área:</b> ${area.toFixed(2)} km²<br/>
+        <b>Área:</b> ${area > 0 && area < 0.01 ? '< 0.01' : area.toFixed(2)} km² (${areaHa.toFixed(2)} ha)<br/>
         <b>Data:</b> ${p.view_date}
     `, { className: 'custom-popup' });
 }
@@ -111,6 +103,11 @@ function applyFilters() {
 
     // 1. Filtrar Alertas (Mapa)
     const alertasFiltrados = state.alertasRaw.features.filter(f => {
+        // Ignorar geometrias de ponto ou residuais que causam marcadores no mapa
+        if (!f.geometry || (f.geometry.type !== 'Polygon' && f.geometry.type !== 'MultiPolygon')) {
+            return false;
+        }
+        
         const p = f.properties;
         const [y, m, d] = p.view_date.split('-');
         const matchAno = state.filtros.ano === 'Todos' || y === state.filtros.ano;
@@ -173,9 +170,10 @@ function updateRankingTable() {
     tbody.innerHTML = '';
     rankingSorted.forEach(item => {
         const tr = document.createElement('tr');
+        const displayHa = (item.area * 100).toFixed(1);
         tr.innerHTML = `
             <td><span class="muni-name">${item.muni}</span> <span class="uf-tag">${item.uf}</span></td>
-            <td class="text-right text-danger">${item.area.toFixed(2)}</td>
+            <td class="text-right text-danger">${displayHa}</td>
             <td class="text-right"><button class="zoom-btn" onclick="zoomToMuni('${item.muni}')">🔍</button></td>
         `;
         tbody.appendChild(tr);
@@ -253,14 +251,21 @@ function initFilters(ranking) {
     
     document.getElementById('toggle-alerts').addEventListener('change', applyFilters);
     document.getElementById('toggle-kde').addEventListener('change', applyFilters);
+    const kdeTarget = document.getElementById('kde-target');
+    if(kdeTarget) kdeTarget.addEventListener('change', applyFilters);
 }
 
 // Carregamento de Dados
 Promise.all([
-    fetch('data/alertas_web.geojson').then(r => r.json()),
-    fetch('data/kde_isolinhas.geojson').then(r => r.json()),
-    fetch('data/ranking.json').then(r => r.json())
+    fetch('data/alertas_web.geojson').then(r => r.ok ? r.json() : null),
+    fetch('data/kde_isolinhas.geojson').then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('data/ranking.json').then(r => r.ok ? r.json() : null)
 ]).then(([alertas, kde, ranking]) => {
+    if (!alertas || !ranking) {
+        document.querySelector('#ranking-table tbody').innerHTML = '<tr><td colspan="3" class="text-danger">Erro ao carregar dados. Tente limpar o cache (Ctrl+F5).</td></tr>';
+        return;
+    }
+    
     state.alertasRaw = alertas;
     state.kdeRaw = kde;
     state.rankingRaw = ranking;
@@ -271,4 +276,7 @@ Promise.all([
     if (state.camadas.alertas.getLayers().length > 0) {
         map.fitBounds(state.camadas.alertas.getBounds());
     }
-}).catch(err => console.error("Erro ao carregar dashboard:", err));
+}).catch(err => {
+    console.error("Erro ao carregar dashboard:", err);
+    document.querySelector('#ranking-table tbody').innerHTML = '<tr><td colspan="3" class="text-danger">Erro fatal. Veja o console.</td></tr>';
+});

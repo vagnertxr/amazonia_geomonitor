@@ -1,5 +1,4 @@
 # Rotinas para acessar a API do TerraBrasilis (INPE) via WFS
-# Autor: Gemini CLI
 
 # Configurar biblioteca local
 .libPaths(c('~/amazonia_geomonitor/R_libs', .libPaths()))

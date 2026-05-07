@@ -115,7 +115,7 @@ alertas_centroides <- alertas_cruzados %>%
     ))
   ) %>%
   # Manter só colunas que o app.js usa
-  select(
+  dplyr::select(
     classname, classe, view_date,
     area_km2,
     name_muni, abbrev_state,

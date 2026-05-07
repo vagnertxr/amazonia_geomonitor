@@ -9,7 +9,6 @@ library(dplyr)
 library(jsonlite)
 library(spatstat)
 library(raster)
-library(geobr)
 
 sf::sf_use_s2(FALSE)
 
@@ -83,6 +82,8 @@ cat("\n3. Processando atributos e cruzando com municípios...\n")
 
 alertas_proc <- alertas_raw %>%
   st_transform(4326) %>%
+  # Remover geometrias pontuais para evitar erros de renderização
+  filter(as.character(st_geometry_type(geometry)) %in% c("POLYGON", "MULTIPOLYGON")) %>%
   mutate(
     view_date = as.Date(view_date),
     ano       = as.numeric(format(view_date, "%Y")),
@@ -164,11 +165,11 @@ for (c_id in cenarios) {
   cat(sprintf("   - %s ... ", c_id))
 
   if (c_id == "Todos") {
-    alertas_p <- alertas_cruzados %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_validados %>% st_transform(CRS_UTM)
   } else if (grepl("/", c_id)) {
-    alertas_p <- alertas_cruzados %>% filter(periodo == c_id) %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_validados %>% filter(periodo == c_id) %>% st_transform(CRS_UTM)
   } else {
-    alertas_p <- alertas_cruzados %>% filter(as.character(ano) == c_id) %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_validados %>% filter(as.character(ano) == c_id) %>% st_transform(CRS_UTM)
   }
 
   if (nrow(alertas_p) < 10) { cat("pulado\n"); next }

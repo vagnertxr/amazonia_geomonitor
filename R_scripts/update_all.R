@@ -1,6 +1,7 @@
 # =============================================================================
 # Amazônia Geomonitor - Script Unificado de Processamento
-# Baseado na branch funcional + série histórica 2020 com paginação por ano
+# Abordagem: centroides (pontos) em vez de polígonos
+# Vantagens: arquivo ~15-20 MB vs 200+ MB dos polígonos originais
 # =============================================================================
 
 source("R_scripts/rotinas_inpe.R")
@@ -9,6 +10,7 @@ library(dplyr)
 library(jsonlite)
 library(spatstat)
 library(raster)
+library(geobr)
 
 sf::sf_use_s2(FALSE)
 
@@ -28,9 +30,6 @@ municipios_br <- read_municipality(year = 2020, showProgress = FALSE) %>%
 
 # =============================================================================
 # 2. Download com Paginação por Ano (sem limite de features)
-# =============================================================================
-# O WFS do TerraBrasilis pode truncar requests muito grandes.
-# Paginar por ano garante cobertura completa sem teto implícito.
 # =============================================================================
 cat("\n2. Baixando alertas DETER (paginação por ano, sem limite)...\n")
 
@@ -53,7 +52,7 @@ for (ano_dl in anos_download) {
     download_terrabrasilis_wfs(
       layer_name   = "deter-amz:deter_amz",
       cql_filter   = filtro_ano,
-      max_features = NULL  # sem limite — baixa tudo do ano
+      max_features = NULL
     )
   }, error = function(e) {
     cat(sprintf("FALHOU (%s)\n", conditionMessage(e)))
@@ -82,8 +81,6 @@ cat("\n3. Processando atributos e cruzando com municípios...\n")
 
 alertas_proc <- alertas_raw %>%
   st_transform(4326) %>%
-  # Remover geometrias pontuais para evitar erros de renderização
-  filter(as.character(st_geometry_type(geometry)) %in% c("POLYGON", "MULTIPOLYGON")) %>%
   mutate(
     view_date = as.Date(view_date),
     ano       = as.numeric(format(view_date, "%Y")),
@@ -101,21 +98,54 @@ alertas_cruzados <- st_join(alertas_validados, municipios_br, join = st_intersec
 cat(sprintf("   %d polígonos válidos após cruzamento\n", nrow(alertas_cruzados)))
 
 # =============================================================================
-# 4. Exportar GeoJSON de Alertas
+# 4. Converter para Centroides + Selecionar só colunas necessárias
 # =============================================================================
-cat("\n4. Exportando data/alertas_web.geojson...\n")
+# Centroides são pontos — muito menores que polígonos.
+# 270k pontos com 7 atributos → ~15 MB vs 200+ MB dos polígonos.
+# A área do alerta é preservada como atributo para escalar o raio do círculo.
+# =============================================================================
+cat("\n4. Convertendo polígonos para centroides...\n")
+
+alertas_centroides <- alertas_cruzados %>%
+  # Calcular área real do polígono antes de converter para ponto
+  mutate(
+    area_km2 = as.numeric(pmax(
+      ifelse(is.na(areamunkm), 0, areamunkm),
+      ifelse(is.na(areauckm),  0, areauckm)
+    ))
+  ) %>%
+  # Manter só colunas que o app.js usa
+  select(
+    classname, classe, view_date,
+    area_km2,
+    name_muni, abbrev_state,
+    ano, mes, periodo
+  ) %>%
+  # Converter geometria para centroide
+  st_centroid()
+
+cat(sprintf("   %d centroides gerados\n", nrow(alertas_centroides)))
+
+# =============================================================================
+# 5. Exportar GeoJSON de Alertas (pontos)
+# =============================================================================
+cat("\n5. Exportando data/alertas_web.geojson...\n")
 
 arquivo_alertas <- "data/alertas_web.geojson"
 if (file.exists(arquivo_alertas)) file.remove(arquivo_alertas)
-st_write(alertas_cruzados, arquivo_alertas, driver = "GeoJSON", quiet = TRUE)
-cat(sprintf("   %.1f MB\n", file.size(arquivo_alertas) / 1e6))
+st_write(alertas_centroides, arquivo_alertas, driver = "GeoJSON",
+         layer_options = "COORDINATE_PRECISION=5",
+         quiet = TRUE)
+
+tamanho_mb <- file.size(arquivo_alertas) / 1e6
+cat(sprintf("   %.1f MB\n", tamanho_mb))
 
 # =============================================================================
-# 5. Gerar Ranking JSON
+# 6. Gerar Ranking JSON
 # =============================================================================
-cat("\n5. Gerando data/ranking.json...\n")
+cat("\n6. Gerando data/ranking.json...\n")
 
-ranking_data <- alertas_cruzados %>%
+ranking_data <- alertas_centroides %>%
   st_drop_geometry() %>%
   mutate(
     ano     = as.numeric(ano),
@@ -128,7 +158,7 @@ ranking_data <- alertas_cruzados %>%
   group_by(ano, mes, periodo, muni, uf, classe) %>%
   summarise(
     total_alertas = n(),
-    area_km2      = sum(areauckm, na.rm = TRUE),
+    area_km2      = sum(area_km2, na.rm = TRUE),
     .groups       = "drop"
   )
 
@@ -136,20 +166,22 @@ write_json(ranking_data, "data/ranking.json", pretty = TRUE)
 cat(sprintf("   %d linhas exportadas\n", nrow(ranking_data)))
 
 # =============================================================================
-# 6. Cálculo de KDE por Período
+# 7. Cálculo de KDE por Período
 # =============================================================================
-cat("\n6. Calculando KDE (Mensal, Anual e Global)...\n")
+# Centroides já são pontos — não precisa mais de st_centroid() no loop
+# =============================================================================
+cat("\n7. Calculando KDE (Mensal, Anual e Global)...\n")
 
 todos_contornos <- list()
 
-cenarios_mensal <- alertas_cruzados %>%
+cenarios_mensal <- alertas_centroides %>%
   st_drop_geometry() %>%
   group_by(periodo) %>%
   summarise(n = n()) %>%
   filter(n >= 10) %>%
   pull(periodo)
 
-cenarios_anual <- alertas_cruzados %>%
+cenarios_anual <- alertas_centroides %>%
   st_drop_geometry() %>%
   mutate(ano_chr = as.character(ano)) %>%
   group_by(ano_chr) %>%
@@ -165,18 +197,18 @@ for (c_id in cenarios) {
   cat(sprintf("   - %s ... ", c_id))
 
   if (c_id == "Todos") {
-    alertas_p <- alertas_validados %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_centroides %>% st_transform(CRS_UTM)
   } else if (grepl("/", c_id)) {
-    alertas_p <- alertas_validados %>% filter(periodo == c_id) %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_centroides %>% filter(periodo == c_id) %>% st_transform(CRS_UTM)
   } else {
-    alertas_p <- alertas_validados %>% filter(as.character(ano) == c_id) %>% st_transform(CRS_UTM)
+    alertas_p <- alertas_centroides %>% filter(as.character(ano) == c_id) %>% st_transform(CRS_UTM)
   }
 
   if (nrow(alertas_p) < 10) { cat("pulado\n"); next }
 
-  pontos_p <- st_centroid(alertas_p)
-  coords   <- st_coordinates(pontos_p)
-  bbox     <- st_bbox(pontos_p)
+  # Centroides já são pontos — usar coordenadas diretamente
+  coords <- st_coordinates(alertas_p)
+  bbox   <- st_bbox(alertas_p)
 
   W     <- owin(xrange = c(bbox["xmin"], bbox["xmax"]),
                 yrange = c(bbox["ymin"], bbox["ymax"]))
@@ -205,9 +237,9 @@ for (c_id in cenarios) {
 }
 
 # =============================================================================
-# 7. Exportar KDE GeoJSON
+# 8. Exportar KDE GeoJSON
 # =============================================================================
-cat("\n7. Exportando data/kde_isolinhas.geojson...\n")
+cat("\n8. Exportando data/kde_isolinhas.geojson...\n")
 
 if (length(todos_contornos) > 0) {
   kde_final   <- do.call(rbind, todos_contornos)

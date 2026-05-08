@@ -381,3 +381,224 @@ To https://github.com/vagnertxr/amazonia_geomonitor.git
    a478201..1d27b53  main -> main
 Dashboard atualizado e enviado com sucesso!
 --- Fim da rotina: Thu May  7 18:36:45 -03 2026 ---
+--- Iniciando atualização: Thu May  7 22:30:13 -03 2026 ---
+Linking to GEOS 3.13.1, GDAL 3.10.3, PROJ 9.5.1; sf_use_s2() is TRUE
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: spatstat.data
+Loading required package: spatstat.univar
+spatstat.univar 3.1-2
+Loading required package: spatstat.geom
+spatstat.geom 3.3-6
+Loading required package: spatstat.random
+spatstat.random 3.3-3
+Loading required package: spatstat.explore
+Loading required package: nlme
+
+Attaching package: ‘nlme’
+
+The following object is masked from ‘package:dplyr’:
+
+    collapse
+
+spatstat.explore 3.3-4
+Loading required package: spatstat.model
+Loading required package: rpart
+spatstat.model 3.3-4
+Loading required package: spatstat.linnet
+spatstat.linnet 3.2-5
+
+spatstat 3.3-1 
+For an introduction to spatstat, type ‘beginner’ 
+
+Loading required package: sp
+
+Attaching package: ‘raster’
+
+The following object is masked from ‘package:nlme’:
+
+    getData
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+Spherical geometry (s2) switched off
+
+=== INICIANDO ATUALIZAÇÃO: AMAZÔNIA GEOMONITOR ===
+Timestamp: 2026-05-07 22:30:18
+
+1. Carregando limites municipais (geobr)...
+Using year/date 2020
+
+2. Baixando alertas DETER (paginação por ano, sem limite)...
+   Baixando 2020... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2020-01-01' AND view_date <= '2020-12-31'
+Sucesso! 50000 registros carregados.
+50000 registros
+   Baixando 2021... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2021-01-01' AND view_date <= '2021-12-31'
+Sucesso! 48184 registros carregados.
+48184 registros
+   Baixando 2022... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2022-01-01' AND view_date <= '2022-12-31'
+Sucesso! 50000 registros carregados.
+50000 registros
+   Baixando 2023... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2023-01-01' AND view_date <= '2023-12-31'
+Sucesso! 40186 registros carregados.
+40186 registros
+   Baixando 2024... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2024-01-01' AND view_date <= '2024-12-31'
+Sucesso! 50000 registros carregados.
+50000 registros
+   Baixando 2025... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2025-01-01' AND view_date <= '2025-12-31'
+Sucesso! 23274 registros carregados.
+23274 registros
+   Baixando 2026... Baixando dados do INPE...
+Camada: deter-amz:deter_amz
+Filtro: view_date >= '2026-01-01' AND view_date <= '2026-12-31'
+Sucesso! 2888 registros carregados.
+2888 registros
+
+   Total bruto: 264532 registros
+
+3. Processando atributos e cruzando com municípios...
+although coordinates are longitude/latitude, st_intersects assumes that they
+are planar
+   269738 polígonos válidos após cruzamento
+
+4. Convertendo polígonos para centroides...
+Warning messages:
+1: st_centroid assumes attributes are constant over geometries 
+2: In st_centroid.sfc(st_geometry(x), of_largest_polygon = of_largest_polygon) :
+  st_centroid does not give correct centroids for longitude/latitude data
+   269738 centroides gerados
+
+5. Exportando data/alertas_web.geojson...
+[1] TRUE
+   90.7 MB
+
+6. Gerando data/ranking.json...
+   28033 linhas exportadas
+
+7. Calculando KDE (Mensal, Anual e Global)...
+   84 cenários (76 mensais, 7 anuais, + global)
+   - 01/2020 ... OK (6 isolinhas)
+   - 01/2021 ... OK (7 isolinhas)
+   - 01/2022 ... OK (6 isolinhas)
+   - 01/2023 ... OK (6 isolinhas)
+   - 01/2024 ... OK (7 isolinhas)
+   - 01/2025 ... OK (6 isolinhas)
+   - 01/2026 ... OK (6 isolinhas)
+   - 02/2020 ... OK (7 isolinhas)
+   - 02/2021 ... OK (7 isolinhas)
+   - 02/2022 ... OK (6 isolinhas)
+   - 02/2023 ... OK (7 isolinhas)
+   - 02/2024 ... OK (6 isolinhas)
+   - 02/2025 ... OK (6 isolinhas)
+   - 02/2026 ... OK (6 isolinhas)
+   - 03/2020 ... OK (6 isolinhas)
+   - 03/2021 ... OK (6 isolinhas)
+   - 03/2022 ... OK (7 isolinhas)
+   - 03/2023 ... OK (6 isolinhas)
+   - 03/2024 ... OK (6 isolinhas)
+   - 03/2025 ... OK (6 isolinhas)
+   - 03/2026 ... OK (6 isolinhas)
+   - 04/2020 ... OK (6 isolinhas)
+   - 04/2021 ... OK (7 isolinhas)
+   - 04/2022 ... OK (6 isolinhas)
+   - 04/2023 ... OK (6 isolinhas)
+   - 04/2024 ... OK (6 isolinhas)
+   - 04/2025 ... OK (7 isolinhas)
+   - 04/2026 ... OK (6 isolinhas)
+   - 05/2020 ... OK (6 isolinhas)
+   - 05/2021 ... OK (6 isolinhas)
+   - 05/2022 ... OK (7 isolinhas)
+   - 05/2023 ... OK (6 isolinhas)
+   - 05/2024 ... OK (7 isolinhas)
+   - 05/2025 ... OK (6 isolinhas)
+   - 06/2020 ... OK (6 isolinhas)
+   - 06/2021 ... OK (6 isolinhas)
+   - 06/2022 ... OK (6 isolinhas)
+   - 06/2023 ... OK (6 isolinhas)
+   - 06/2024 ... OK (7 isolinhas)
+   - 06/2025 ... OK (7 isolinhas)
+   - 07/2020 ... OK (7 isolinhas)
+   - 07/2021 ... OK (6 isolinhas)
+   - 07/2022 ... OK (7 isolinhas)
+   - 07/2023 ... OK (6 isolinhas)
+   - 07/2024 ... OK (6 isolinhas)
+   - 07/2025 ... OK (7 isolinhas)
+   - 08/2020 ... OK (6 isolinhas)
+   - 08/2021 ... OK (6 isolinhas)
+   - 08/2022 ... OK (6 isolinhas)
+   - 08/2023 ... OK (6 isolinhas)
+   - 08/2024 ... OK (6 isolinhas)
+   - 08/2025 ... OK (6 isolinhas)
+   - 09/2020 ... OK (6 isolinhas)
+   - 09/2021 ... OK (6 isolinhas)
+   - 09/2022 ... OK (6 isolinhas)
+   - 09/2023 ... OK (7 isolinhas)
+   - 09/2024 ... OK (6 isolinhas)
+   - 09/2025 ... OK (6 isolinhas)
+   - 10/2020 ... OK (6 isolinhas)
+   - 10/2021 ... OK (7 isolinhas)
+   - 10/2022 ... OK (7 isolinhas)
+   - 10/2023 ... OK (6 isolinhas)
+   - 10/2024 ... OK (6 isolinhas)
+   - 10/2025 ... OK (6 isolinhas)
+   - 11/2020 ... OK (6 isolinhas)
+   - 11/2021 ... OK (7 isolinhas)
+   - 11/2022 ... OK (6 isolinhas)
+   - 11/2023 ... OK (6 isolinhas)
+   - 11/2024 ... OK (6 isolinhas)
+   - 11/2025 ... OK (6 isolinhas)
+   - 12/2020 ... OK (7 isolinhas)
+   - 12/2021 ... OK (6 isolinhas)
+   - 12/2022 ... OK (6 isolinhas)
+   - 12/2023 ... OK (6 isolinhas)
+   - 12/2024 ... OK (7 isolinhas)
+   - 12/2025 ... OK (6 isolinhas)
+   - 2020 ... OK (6 isolinhas)
+   - 2021 ... OK (7 isolinhas)
+   - 2022 ... OK (7 isolinhas)
+   - 2023 ... OK (6 isolinhas)
+   - 2024 ... OK (7 isolinhas)
+   - 2025 ... OK (7 isolinhas)
+   - 2026 ... OK (6 isolinhas)
+   - Todos ... OK (7 isolinhas)
+There were 50 or more warnings (use warnings() to see the first 50)
+
+8. Exportando data/kde_isolinhas.geojson...
+   530 features | 11.8 MB
+
+=== ATUALIZAÇÃO CONCLUÍDA COM SUCESSO! ===
+Arquivos gerados: alertas_web.geojson, ranking.json, kde_isolinhas.geojson
+Timestamp: 2026-05-07 22:35:27
+
+Processamento R concluído com sucesso. Atualizando data no HTML...
+Enviando para o GitHub...
+remote: warning: See https://gh.io/lfs for more information.        
+remote: warning: File data/alertas_web.geojson is 86.48 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/vagnertxr/amazonia_geomonitor.git
+   8b74c76..27ab4af  main -> main
+Dashboard atualizado e enviado com sucesso!
+--- Fim da rotina: Thu May  7 22:35:39 -03 2026 ---

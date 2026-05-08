@@ -12,10 +12,18 @@ echo "--- Iniciando atualização: $(date) ---" >> cron.log
 
 # Verificar se houve erro no R
 if [ $? -eq 0 ]; then
-    echo "Processamento R concluído com sucesso. Enviando para o GitHub..." >> cron.log
+    echo "Processamento R concluído com sucesso. Atualizando data no HTML..." >> cron.log
     
-    # Comandos git para subir pro github pages
-    git add data/*.geojson data/*.json
+    # Pega a data atual no formato DD/MM/YYYY
+    DATA_ATUAL=$(date +'%d/%m/%Y')
+    
+    # Atualiza a tag span específica no index.html com a nova data
+    sed -i -E "s|<span id=\"last-update\">Atualização: .*</span>|<span id=\"last-update\">Atualização: $DATA_ATUAL</span>|" index.html
+
+    echo "Enviando para o GitHub..." >> cron.log
+    
+    # Comandos git para subir pro github pages (agora incluindo o index.html)
+    git add data/*.geojson data/*.json index.html
     git commit -m "Automated data update: $(date +'%Y-%m-%d')"
     git push origin main >> cron.log 2>&1
     

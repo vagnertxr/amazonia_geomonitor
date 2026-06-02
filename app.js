@@ -60,10 +60,41 @@ function estiloAlerta(feature) {
 }
 
 function estiloKde(feature) {
-    const level      = parseFloat(feature.properties.level) || 0;
-    const normalized = Math.min(Math.max(level, 0), 1);
+    const p          = feature.properties || {};
+    const normalized = getKdeLevelNorm(p);
     const idx        = Math.min(Math.floor(normalized * kdeColors.length), kdeColors.length - 1);
-    return { color: kdeColors[idx], weight: 1.5, opacity: 0.75, fillOpacity: 0 };
+    return { color: kdeColors[idx], weight: 1.8, opacity: 0.85, fillOpacity: 0 };
+}
+
+function getKdeLevelNorm(properties) {
+    const exportedNorm = parseFloat(properties.level_norm);
+    if (Number.isFinite(exportedNorm)) {
+        return Math.min(Math.max(exportedNorm, 0), 0.999);
+    }
+
+    const level = parseFloat(properties.level);
+    const stats = state.kdeStats[properties.periodo];
+    if (!Number.isFinite(level) || !stats) return 0;
+    if (stats.max === stats.min) return 0.999;
+
+    return Math.min(Math.max((level - stats.min) / (stats.max - stats.min), 0), 0.999);
+}
+
+function buildKdeStats(kde) {
+    const stats = {};
+    if (!kde || !Array.isArray(kde.features)) return stats;
+
+    kde.features.forEach(feature => {
+        const p = feature.properties || {};
+        const level = parseFloat(p.level);
+        if (!p.periodo || !Number.isFinite(level)) return;
+
+        if (!stats[p.periodo]) stats[p.periodo] = { min: level, max: level };
+        stats[p.periodo].min = Math.min(stats[p.periodo].min, level);
+        stats[p.periodo].max = Math.max(stats[p.periodo].max, level);
+    });
+
+    return stats;
 }
 
 // -----------------------------------------------------------------------------
@@ -85,6 +116,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 let state = {
     alertasRaw: null,
     kdeRaw:     null,
+    kdeStats:   {},
     rankingRaw: [],
     filtros: {
         ano:     '2026',
@@ -324,6 +356,7 @@ Promise.all([
     }
     state.alertasRaw = alertas;
     state.kdeRaw     = kde;
+    state.kdeStats   = buildKdeStats(kde);
     state.rankingRaw = ranking;
 
     initFilters(ranking);

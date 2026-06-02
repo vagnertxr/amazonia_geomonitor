@@ -232,7 +232,22 @@ for (c_id in cenarios) {
   contornos <- tryCatch(rasterToContour(r_wgs84, levels = niveis), error = function(e) NULL)
   if (is.null(contornos)) { cat("erro contorno\n"); next }
 
-  todos_contornos[[c_id]] <- st_as_sf(contornos) %>% mutate(periodo = c_id)
+  contornos_sf <- st_as_sf(contornos) %>%
+    mutate(level = as.numeric(level))
+
+  level_min <- min(contornos_sf$level, na.rm = TRUE)
+  level_max <- max(contornos_sf$level, na.rm = TRUE)
+
+  todos_contornos[[c_id]] <- contornos_sf %>%
+    mutate(
+      periodo    = c_id,
+      level_min  = level_min,
+      level_max  = level_max,
+      level_norm = ifelse(level_max > level_min,
+                          (level - level_min) / (level_max - level_min),
+                          1),
+      level_rank = pmin(floor(level_norm * 6) + 1, 6)
+    )
   cat(sprintf("OK (%d isolinhas)\n", nrow(todos_contornos[[c_id]])))
 }
 

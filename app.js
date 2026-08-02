@@ -102,6 +102,7 @@ function buildKdeStats(kde) {
 // -----------------------------------------------------------------------------
 
 const map = L.map('map').setView([-10, -55], 5);
+map.attributionControl.setPrefix('Leaflet');
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     maxZoom:     19,

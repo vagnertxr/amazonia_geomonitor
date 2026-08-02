@@ -18,6 +18,31 @@ sf::sf_use_s2(FALSE)
 DATA_INICIO <- "2020-01-01"
 CRS_UTM     <- 31981  # SIRGAS 2000 / UTM zone 21S
 
+carregar_municipios_com_retry <- function(max_tentativas = 3, pausa_segundos = 20) {
+  for (tentativa in seq_len(max_tentativas)) {
+    cat(sprintf("   Tentativa %d/%d para carregar municípios...\n", tentativa, max_tentativas))
+
+    resultado <- tryCatch({
+      read_municipality(year = 2020, showProgress = FALSE) %>%
+        st_transform(4326)
+    }, error = function(e) {
+      cat(sprintf("   Falha na tentativa %d: %s\n", tentativa, conditionMessage(e)))
+      NULL
+    })
+
+    if (!is.null(resultado) && nrow(resultado) > 0) {
+      return(resultado)
+    }
+
+    if (tentativa < max_tentativas) {
+      cat(sprintf("   Aguardando %d segundos antes da próxima tentativa...\n", pausa_segundos))
+      Sys.sleep(pausa_segundos)
+    }
+  }
+
+  stop("Não foi possível carregar os limites municipais após várias tentativas.")
+}
+
 cat("\n=== INICIANDO ATUALIZAÇÃO: AMAZÔNIA GEOMONITOR ===\n")
 cat(sprintf("Timestamp: %s\n", format(Sys.time(), "%Y-%m-%d %H:%M:%S")))
 
@@ -25,8 +50,7 @@ cat(sprintf("Timestamp: %s\n", format(Sys.time(), "%Y-%m-%d %H:%M:%S")))
 # 1. Carregar Municípios (para cruzamento espacial)
 # =============================================================================
 cat("\n1. Carregando limites municipais (geobr)...\n")
-municipios_br <- read_municipality(year = 2020, showProgress = FALSE) %>%
-  st_transform(4326)
+municipios_br <- carregar_municipios_com_retry()
 
 # =============================================================================
 # 2. Download com Paginação por Ano (sem limite de features)
@@ -90,7 +114,39 @@ alertas_proc <- alertas_raw %>%
   ) %>%
   filter(areamunkm > 0 | areauckm > 0)
 
-alertas_validados <- st_make_valid(alertas_proc)
+alertas_validados <- tryCatch(
+  st_make_valid(alertas_proc),
+  error = function(e) {
+    cat(sprintf("   st_make_valid falhou em lote (%s).\n", conditionMessage(e)))
+    cat("   Isolando geometria por geometria para descartar registros degenerados...\n")
+    NULL
+  }
+)
+
+if (is.null(alertas_validados)) {
+  geoms   <- st_geometry(alertas_proc)
+  n       <- length(geoms)
+  geoms_lista <- vector("list", n)
+  falhas  <- logical(n)
+
+  for (i in seq_len(n)) {
+    geom_valida <- tryCatch(st_make_valid(geoms[[i]]), error = function(e) NULL)
+    if (is.null(geom_valida) || st_is_empty(geom_valida)) {
+      falhas[i] <- TRUE
+      geoms_lista[[i]] <- geoms[[i]]
+    } else {
+      geoms_lista[[i]] <- geom_valida
+    }
+  }
+
+  if (any(falhas)) {
+    cat(sprintf("   AVISO: %d de %d geometria(s) degenerada(s) descartada(s) (%.3f%%).\n",
+        sum(falhas), n, 100 * sum(falhas) / n))
+  }
+
+  st_geometry(alertas_proc) <- st_sfc(geoms_lista, crs = st_crs(alertas_proc))
+  alertas_validados <- alertas_proc[!falhas, ]
+}
 
 alertas_cruzados <- st_join(alertas_validados, municipios_br, join = st_intersects) %>%
   filter(as.character(st_geometry_type(.)) %in% c("POLYGON", "MULTIPOLYGON"))

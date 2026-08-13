@@ -3,146 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeomonitoR</title>
-    
+    <title>GeomonitoR da Amazônia</title>
+    <meta name="description" content="Painel de monitoramento de desmatamento e degradação florestal na Amazônia Legal a partir dos alertas DETER do INPE.">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="header">
-        <div class="header-content">
-            <div class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M13 7 9 3 5 7l4 4" />
-                  <path d="m17 11 4 4-4 4-4-4" />
-                  <path d="m8 12 4 4 6-6-4-4Z" />
-                  <path d="m16 8 3-3" />
-                  <path d="M9 21a6 6 0 0 0-6-6" />
-                </svg>
-                <div class="title-wrapper">
-                    <h1>GeomonitoR da Amazônia</h1>
-                    <p class="header-subtitle">Monitoramento de supressão vegetal e degradação florestal via satélite. Dados oficiais: DETER (INPE).</p>
-                </div>
-            </div>
-            <div class="header-info">
-                <span id="last-update">Atualização: 04/07/2026</span>
-            </div>
+<a class="skip-link" href="#map" data-i18n="a11y.skip">Ir para o mapa</a>
+
+<header id="header">
+    <div class="brand">
+        <svg class="brand-mark" width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/>
+            <path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/>
+        </svg>
+        <div class="brand-text">
+            <h1 data-i18n="app.title">GeomonitoR da Amazônia</h1>
+            <p class="brand-sub" data-i18n="app.subtitle"></p>
         </div>
     </div>
 
-    <div id="main-container">
-        <!-- Sidebar Area -->
-        <div id="sidebar">
-            <div class="panel filters-panel">
-                <div class="panel-section">
-                    <h2>Filtros Temporais</h2>
-                    <div class="filter-group">
-                        <label>Ano</label>
-                        <select id="filter-year">
-                            <option value="Todos">Todos os Anos</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Mês</label>
-                        <select id="filter-month">
-                            <option value="Todos">Todos os Meses</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="panel-section">
-                    <h2>Classe de Alerta</h2>
-                    <div id="class-filters" class="class-filters-grid">
-                        <!-- Gerado via JS -->
-                    </div>
-                </div>
-
-                <div class="panel-section">
-                    <h2>Camadas do Mapa</h2>
-                    <div class="layer-controls">
-                        <label class="toggle-control">
-                            <input type="checkbox" id="toggle-alerts" checked>
-                            <span class="control-indicator"></span>
-                            <span class="control-label">Alertas DETER</span>
-                        </label>
-                        <label class="toggle-control">
-                            <input type="checkbox" id="toggle-kde" checked>
-                            <span class="control-indicator"></span>
-                            <span class="control-label">Densidade de Kernel</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel table-panel">
-                <div class="panel-header">
-                    <h2>Ranking Municipal</h2>
-                    <span class="badge" id="stats-count">0 alertas</span>
-                </div>
-                <div class="table-container">
-                    <table id="ranking-table">
-                        <thead>
-                            <tr>
-                                <th>Município / UF</th>
-                                <th class="text-right">Área (ha)</th>
-                                <th class="text-right">Aproximar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td colspan="3" class="loading">Iniciando Geomonitor...</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <div class="header-side">
+        <div id="meta-info" class="meta-info">
+            <span class="meta-primary" id="meta-data" data-i18n="meta.loading"></span>
+            <span class="meta-secondary" id="meta-build"></span>
         </div>
-        
-        <!-- Map Area -->
-        <div id="map-container">
-            <div id="map"></div>
-            <div class="map-legend">
-                <div class="legend-section">
-                    <div class="legend-title">Classes de Alerta</div>
-                    <div class="legend-scale" id="legend-classes">
-                        <!-- Gerado via JS -->
-                    </div>
-                </div>
-                <div class="legend-section" style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
-                    <div class="legend-title">Densidade (KDE)</div>
-                    <div class="legend-scale">
-                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #f59e0b;"></span> Baixa</div>
-                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #ef4444;"></span> Média</div>
-                        <div class="scale-item"><span class="color-dot" style="background: transparent; border: 2px solid #b91c1c;"></span> Alta</div>
-                    </div>
-                </div>
-                <div class="legend-section" style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
-                    <div class="legend-title">Limites (IBGE)</div>
-                    <div class="legend-scale">
-                        <div class="scale-item">
-                            <span class="color-dot" style="background: transparent; border: 2px dashed #ffffff; border-radius: 0;"></span> 
-                            Amazônia Legal
-                        </div>
-                        <div class="scale-item">
-                            <span class="color-dot" style="background: transparent; border: 2px dashed #10b981; border-radius: 0;"></span> 
-                            Bioma Amazônia
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="lang-switch" class="lang-switch" role="group" data-i18n="a11y.lang" data-i18n-attr="aria-label">
+            <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
     </div>
+</header>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="app.js"></script>
+<section id="kpi-band" class="kpi-band" aria-live="polite">
+    <div class="kpi">
+        <span class="kpi-label" data-i18n="kpi.area"></span>
+        <span class="kpi-value" id="kpi-area">—</span>
+        <span class="kpi-unit">km²</span>
+    </div>
+    <div class="kpi">
+        <span class="kpi-label" data-i18n="kpi.alerts"></span>
+        <span class="kpi-value" id="kpi-alerts">—</span>
+    </div>
+    <div class="kpi">
+        <span class="kpi-label" data-i18n="kpi.yoy"></span>
+        <span class="kpi-value" id="kpi-yoy">—</span>
+    </div>
+    <div class="kpi" id="kpi-protected-box" hidden>
+        <span class="kpi-label" data-i18n="kpi.protected"></span>
+        <span class="kpi-value" id="kpi-protected">—</span>
+    </div>
+    <div class="kpi kpi--wide">
+        <span class="kpi-label" data-i18n="kpi.topMuni"></span>
+        <span class="kpi-value kpi-value--text" id="kpi-top">—</span>
+    </div>
+</section>
+
+<div id="main-container">
+
+    <aside id="sidebar">
+        <div class="tabs" role="tablist" aria-label="Painéis">
+            <button role="tab" id="tab-btn-filtros"  aria-controls="painel-filtros"  aria-selected="true"  data-i18n="tabs.filters"></button>
+            <button role="tab" id="tab-btn-ranking"  aria-controls="painel-ranking"  aria-selected="false" data-i18n="tabs.ranking"></button>
+            <button role="tab" id="tab-btn-analise"  aria-controls="painel-analise"  aria-selected="false" data-i18n="tabs.analysis"></button>
+        </div>
+
+        <!-- ------------------------------------------------------ FILTROS -->
+        <section class="tab-panel" id="painel-filtros" role="tabpanel" aria-labelledby="tab-btn-filtros">
+
+            <div class="panel-section">
+                <h2 data-i18n="filters.temporal"></h2>
+                <div class="field-row">
+                    <div class="field">
+                        <label for="filter-year" data-i18n="filters.year"></label>
+                        <select id="filter-year"></select>
+                    </div>
+                    <div class="field">
+                        <label for="filter-month" data-i18n="filters.month"></label>
+                        <select id="filter-month"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <div class="section-head">
+                    <h2 data-i18n="filters.class"></h2>
+                    <div class="mini-actions">
+                        <button type="button" id="cls-all"  data-i18n="filters.all"></button>
+                        <button type="button" id="cls-none" data-i18n="filters.none"></button>
+                    </div>
+                </div>
+                <div id="class-filters" class="class-filters"></div>
+            </div>
+
+            <div class="panel-section">
+                <h2 data-i18n="filters.layers"></h2>
+                <div class="layer-controls">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-alerts" checked>
+                        <span class="switch-track"></span>
+                        <span class="switch-label" data-i18n="layers.alerts"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-kde" checked>
+                        <span class="switch-track"></span>
+                        <span class="switch-label" data-i18n="layers.density"></span>
+                    </label>
+                    <label class="switch" id="toggle-prot-wrap" hidden>
+                        <input type="checkbox" id="toggle-protected">
+                        <span class="switch-track"></span>
+                        <span class="switch-label" data-i18n="layers.protected"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="panel-section" id="secao-kde">
+                <h2 data-i18n="density.title"></h2>
+
+                <fieldset class="segmented">
+                    <legend data-i18n="density.metric"></legend>
+                    <label><input type="radio" name="kde-metrica" value="n" checked><span data-i18n="density.byCount"></span></label>
+                    <label><input type="radio" name="kde-metrica" value="area"><span data-i18n="density.byArea"></span></label>
+                </fieldset>
+
+                <fieldset class="segmented">
+                    <legend data-i18n="density.bandwidth"></legend>
+                    <label><input type="radio" name="kde-banda" value="auto" checked><span data-i18n="density.bwAuto"></span></label>
+                    <label><input type="radio" name="kde-banda" value="detalhe"><span data-i18n="density.bwDetail"></span></label>
+                    <label><input type="radio" name="kde-banda" value="padrao"><span data-i18n="density.bwStd"></span></label>
+                    <label><input type="radio" name="kde-banda" value="ampla"><span data-i18n="density.bwBroad"></span></label>
+                </fieldset>
+
+                <fieldset class="segmented">
+                    <legend data-i18n="density.render"></legend>
+                    <label><input type="radio" name="kde-modo" value="contorno" checked><span data-i18n="density.contour"></span></label>
+                    <label><input type="radio" name="kde-modo" value="grade"><span data-i18n="density.grid"></span></label>
+                </fieldset>
+
+                <p class="hint" id="kde-hint"></p>
+            </div>
+
+        </section>
+
+        <!-- ------------------------------------------------------ RANKING -->
+        <section class="tab-panel" id="painel-ranking" role="tabpanel" aria-labelledby="tab-btn-ranking" hidden>
+            <div class="panel-head">
+                <h2 data-i18n="ranking.title"></h2>
+                <span class="badge" id="stats-count">—</span>
+            </div>
+            <fieldset class="segmented segmented--flush">
+                <legend class="visually-hidden">Ordenação</legend>
+                <label><input type="radio" name="rank-ordem" value="area" checked><span data-i18n="ranking.byArea"></span></label>
+                <label><input type="radio" name="rank-ordem" value="alta"><span data-i18n="ranking.byTrend"></span></label>
+            </fieldset>
+            <div class="table-wrap">
+                <table id="ranking-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="ranking.muni"></th>
+                            <th class="text-right" id="rank-col-2" data-i18n="ranking.area"></th>
+                            <th class="text-right"><span class="visually-hidden" data-i18n="ranking.zoomTo"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td colspan="3" class="loading"><span class="skeleton"></span></td></tr></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------ ANALISE -->
+        <section class="tab-panel" id="painel-analise" role="tabpanel" aria-labelledby="tab-btn-analise" hidden>
+            <div class="chart-block">
+                <h2 data-i18n="analysis.series"></h2>
+                <div id="chart-serie"></div>
+            </div>
+            <div class="chart-block">
+                <h2 data-i18n="analysis.seasonal"></h2>
+                <div id="chart-sazonal"></div>
+            </div>
+            <div class="chart-block">
+                <h2 data-i18n="analysis.trending"></h2>
+                <p class="hint" data-i18n="analysis.trendHelp"></p>
+                <div id="chart-alta"></div>
+            </div>
+        </section>
+    </aside>
+
+    <!-- ---------------------------------------------------------- MAPA -->
+    <main id="map-container">
+        <div id="map"></div>
+
+        <div class="map-player" id="player">
+            <button type="button" id="player-btn" data-i18n-title="player.play" aria-label="play">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <input type="range" id="player-range" min="0" max="0" value="0" aria-label="timeline">
+            <span class="player-label" id="player-label">—</span>
+        </div>
+
+        <div class="map-legend" id="map-legend">
+            <div class="legend-block">
+                <div class="legend-title" data-i18n="legend.density"></div>
+                <div class="legend-ramp" id="legend-kde"></div>
+                <div class="legend-scale-ends">
+                    <span data-i18n="legend.low"></span><span data-i18n="legend.high"></span>
+                </div>
+            </div>
+            <div class="legend-block" id="legend-alertas-bloco">
+                <div class="legend-title" data-i18n="legend.classes"></div>
+                <div class="legend-list" id="legend-classes"></div>
+            </div>
+            <div class="legend-block">
+                <div class="legend-title" data-i18n="legend.limits"></div>
+                <div class="legend-list">
+                    <div class="legend-item"><span class="swatch swatch--line" style="--c:#e8e6dd"></span><span data-i18n="legend.legalAmz"></span></div>
+                    <div class="legend-item"><span class="swatch swatch--line" style="--c:#199e70"></span><span data-i18n="legend.biome"></span></div>
+                </div>
+            </div>
+            <p class="legend-note" id="legend-note" hidden></p>
+        </div>
+    </main>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="i18n.js"></script>
+<script src="kde.js"></script>
+<script src="charts.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

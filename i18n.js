@@ -6,7 +6,7 @@
 const I18N = {
     pt: {
         'app.title':        'GeomonitoR da Amazônia',
-        'app.subtitle':     'Monitoramento de supressão vegetal e degradação florestal por satélite',
+        'app.subtitle':     'Monitoramento por satélite da supressão de vegetação nativa e da degradação florestal',
 
         'meta.loading':     'Carregando dados…',
         'meta.dataUpto':    'Dados até',
@@ -39,7 +39,7 @@ const I18N = {
         'density.title':    'Modelo de densidade',
         'density.metric':   'Ponderação',
         'density.byCount':  'Nº de alertas',
-        'density.byArea':   'Área desmatada',
+        'density.byArea':   'Área alertada',
         'density.bandwidth':'Suavização',
         'density.bwAuto':   'Automática',
         'density.bwDetail': 'Detalhe',
@@ -96,12 +96,12 @@ const I18N = {
         'a11y.sort':        'Ordenação do ranking',
 
         'doc.title':        'GeomonitoR da Amazônia — alertas DETER/INPE',
-        'doc.desc':         'Painel de monitoramento de desmatamento e degradação florestal na Amazônia Legal a partir dos alertas DETER do INPE.',
+        'doc.desc':         'Painel de monitoramento da supressão de vegetação nativa e da degradação florestal na Amazônia Legal, a partir dos alertas DETER do INPE.',
 
         'error.load':       'Erro ao carregar os dados. Tente recarregar a página (Ctrl+F5).',
 
         'class.DESMATAMENTO_CR':      'Corte raso',
-        'class.DESMATAMENTO_VEG':     'Corte raso com vegetação',
+        'class.DESMATAMENTO_VEG':     'Corte raso com vegetação remanescente',
         'class.DEGRADACAO':           'Degradação',
         'class.MINERACAO':            'Mineração',
         'class.CS_DESORDENADO':       'Corte seletivo desordenado',
@@ -116,7 +116,7 @@ const I18N = {
 
     en: {
         'app.title':        'Amazon GeomonitoR',
-        'app.subtitle':     'Satellite monitoring of forest clearing and degradation',
+        'app.subtitle':     'Satellite monitoring of native vegetation loss and forest degradation',
 
         'meta.loading':     'Loading data…',
         'meta.dataUpto':    'Data through',
@@ -149,7 +149,7 @@ const I18N = {
         'density.title':    'Density model',
         'density.metric':   'Weighting',
         'density.byCount':  'Alert count',
-        'density.byArea':   'Cleared area',
+        'density.byArea':   'Alerted area',
         'density.bandwidth':'Smoothing',
         'density.bwAuto':   'Automatic',
         'density.bwDetail': 'Detail',
@@ -206,12 +206,12 @@ const I18N = {
         'a11y.sort':        'Ranking sort order',
 
         'doc.title':        'Amazon GeomonitoR — DETER/INPE alerts',
-        'doc.desc':         'Dashboard monitoring deforestation and forest degradation in the Brazilian Legal Amazon from INPE DETER alerts.',
+        'doc.desc':         'Dashboard monitoring native vegetation loss and forest degradation across the Brazilian Legal Amazon, from INPE DETER alerts.',
 
         'error.load':       'Failed to load data. Try reloading the page (Ctrl+F5).',
 
         'class.DESMATAMENTO_CR':      'Clear-cut',
-        'class.DESMATAMENTO_VEG':     'Clear-cut with vegetation',
+        'class.DESMATAMENTO_VEG':     'Clear-cut with remaining vegetation',
         'class.DEGRADACAO':           'Degradation',
         'class.MINERACAO':            'Mining',
         'class.CS_DESORDENADO':       'Disordered selective logging',

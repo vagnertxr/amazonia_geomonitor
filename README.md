@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/vagnertxr/amazonia_geomonitor/1e17c8b98211d7532eef9f587eee8da89b0d9646/favicon.svg" width="32" valign="middle"> Amazon GeomonitoR
 
-**Territorial intelligence dashboard for monitoring deforestation and forest degradation across the Brazilian Legal Amazon. Heavy processing in R, delivery as a fully static site.**
+**Territorial intelligence dashboard for monitoring native vegetation loss and forest degradation across the Brazilian Legal Amazon. Heavy processing in R, delivery as a fully static site.**
 
 The dashboard interface is bilingual (Portuguese / English) and defaults to Portuguese.
 
@@ -8,7 +8,9 @@ The dashboard interface is bilingual (Portuguese / English) and defaults to Port
 
 All data is public and official, refreshed by an automated routine:
 
-- **DETER alerts (INPE)** — Brazil's near-real-time deforestation detection system. Covers clear-cutting, clear-cutting with remaining vegetation, degradation, mining, selective logging (disordered and geometric) and burn scars.
+- **DETER alerts (INPE)** — Brazil's Real-Time Deforestation Detection System. Covers clear-cutting, clear-cutting with remaining vegetation, degradation, mining, selective logging (disordered and geometric) and burn scars.
+
+  DETER flags changes in vegetation cover; it does not assess whether a given clearing was authorised. Wording throughout the interface stays neutral on legality for that reason — "alerted area" rather than "cleared area", since a degradation or burn-scar alert covers forest that is still standing.
 - **Territorial boundaries (IBGE)** — municipalities, the Amazon biome and the Legal Amazon, via the `geobr` package.
 - **Protected areas** — Indigenous Lands and Conservation Units, from TerraBrasilis, already clipped to the Legal Amazon.
 
@@ -38,7 +40,7 @@ No framework, no build step, no charting library — charts are SVG generated in
 
 **Browser-side KDE.** Instead of pre-computed contours — 13 MB, and blind to the class filter — the pipeline exports a sparse grid of counts per cell × month × class (0.84 MB, roughly 290 KB gzipped). The browser accumulates the active selection, applies a separable Gaussian convolution and extracts isolines with marching squares. The full cycle takes 12–35 ms, so the density surface is recomputed on every filter change.
 
-Bandwidth is adaptive, scaling with `n^(-1/6)`, so sparse selections are smoothed more heavily than dense ones; it is driven by sample size rather than by the weighting metric, so switching between alert count and cleared area does not change the smoothing radius. Levels are quantiles of the positive density, which removes the noise ring that previously accounted for half the vertices in the contour file.
+Bandwidth is adaptive, scaling with `n^(-1/6)`, so sparse selections are smoothed more heavily than dense ones; it is driven by sample size rather than by the weighting metric, so switching between alert count and alerted area does not change the smoothing radius. Levels are quantiles of the positive density, which removes the noise ring that previously accounted for half the vertices in the contour file.
 
 **Encoding.** Colour identifies the DETER class and circle size encodes an area class; no variable is encoded twice. A scatter map requires every one of the 28 colour pairs to separate, so the palette was optimised to maximise the minimum separation under protanopia, deuteranopia and tritanopia: the worst pair sits at ΔE 10.9 (floor 8) and ΔE 19.5 under normal vision (floor 15). That required varying lightness across classes — the only channel that survives colour-vision deficiency at eight categories. The same colour table drives the filter chips, the map legend and the marks themselves.
 

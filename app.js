@@ -765,9 +765,19 @@ function montarLegendaMapa() {
     leg.insertAdjacentHTML('beforeend', escalaTamanhoHTML());
 }
 
-/** Escala de tamanho com os cortes reais, para a legenda poder ser conferida. */
+/**
+ * Escala de tamanho com os cortes reais, para a legenda poder ser conferida.
+ * Os rótulos saem dos próprios cortes e passam por num(), então o separador
+ * decimal acompanha o idioma (0,1 em pt-BR / 0.1 em inglês).
+ */
 function escalaTamanhoHTML() {
-    const rotulos = ['< 0,1', '0,1 – 0,5', '0,5 – 2', '2 – 10', '≥ 10'];
+    const casas = (v) => (v < 1 ? 1 : 0);
+    const rotulos = CLASSES_AREA.map((c, i) => {
+        const de = i > 0 ? CLASSES_AREA[i - 1].max : null;
+        if (de === null)          return `< ${num(c.max, casas(c.max))}`;
+        if (c.max === Infinity)   return `≥ ${num(de, casas(de))}`;
+        return `${num(de, casas(de))} – ${num(c.max, casas(c.max))}`;
+    });
     const itens = CLASSES_AREA.map((c, i) => {
         const d = c.raio * 2;
         return `<span class="size-item">

@@ -69,7 +69,7 @@
 <div id="main-container">
 
     <aside id="sidebar">
-        <div class="tabs" role="tablist" aria-label="Painéis">
+        <div class="tabs" role="tablist" data-i18n="a11y.panels" data-i18n-attr="aria-label">
             <button role="tab" id="tab-btn-filtros"  aria-controls="painel-filtros"  aria-selected="true"  data-i18n="tabs.filters"></button>
             <button role="tab" id="tab-btn-ranking"  aria-controls="painel-ranking"  aria-selected="false" data-i18n="tabs.ranking"></button>
             <button role="tab" id="tab-btn-analise"  aria-controls="painel-analise"  aria-selected="false" data-i18n="tabs.analysis"></button>
@@ -159,7 +159,7 @@
                 <span class="badge" id="stats-count">—</span>
             </div>
             <fieldset class="segmented segmented--flush">
-                <legend class="visually-hidden">Ordenação</legend>
+                <legend class="visually-hidden" data-i18n="a11y.sort"></legend>
                 <label><input type="radio" name="rank-ordem" value="area" checked><span data-i18n="ranking.byArea"></span></label>
                 <label><input type="radio" name="rank-ordem" value="alta"><span data-i18n="ranking.byTrend"></span></label>
             </fieldset>
@@ -203,7 +203,7 @@
             <button type="button" id="player-btn" data-i18n-title="player.play" aria-label="play">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
             </button>
-            <input type="range" id="player-range" min="0" max="0" value="0" aria-label="timeline">
+            <input type="range" id="player-range" min="0" max="0" value="0" data-i18n="a11y.timeline" data-i18n-attr="aria-label">
             <span class="player-label" id="player-label">—</span>
         </div>
 

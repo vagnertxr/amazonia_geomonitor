@@ -91,6 +91,12 @@ const I18N = {
 
         'a11y.lang':        'Alternar idioma',
         'a11y.skip':        'Ir para o mapa',
+        'a11y.panels':      'Painéis do dashboard',
+        'a11y.timeline':    'Linha do tempo: mês exibido no mapa',
+        'a11y.sort':        'Ordenação do ranking',
+
+        'doc.title':        'GeomonitoR da Amazônia — alertas DETER/INPE',
+        'doc.desc':         'Painel de monitoramento de desmatamento e degradação florestal na Amazônia Legal a partir dos alertas DETER do INPE.',
 
         'error.load':       'Erro ao carregar os dados. Tente recarregar a página (Ctrl+F5).',
 
@@ -195,6 +201,12 @@ const I18N = {
 
         'a11y.lang':        'Switch language',
         'a11y.skip':        'Skip to map',
+        'a11y.panels':      'Dashboard panels',
+        'a11y.timeline':    'Timeline: month shown on the map',
+        'a11y.sort':        'Ranking sort order',
+
+        'doc.title':        'Amazon GeomonitoR — DETER/INPE alerts',
+        'doc.desc':         'Dashboard monitoring deforestation and forest degradation in the Brazilian Legal Amazon from INPE DETER alerts.',
 
         'error.load':       'Failed to load data. Try reloading the page (Ctrl+F5).',
 
@@ -215,10 +227,11 @@ const I18N = {
 
 const LOCALES = { pt: 'pt-BR', en: 'en-GB' };
 
+// Portugues e o padrao: o painel cobre a Amazonia brasileira e a maior parte
+// do publico e daqui. O ingles fica a um clique, e a escolha e lembrada.
 let idioma = (() => {
     const salvo = localStorage.getItem('geomonitor.lang');
-    if (salvo && I18N[salvo]) return salvo;
-    return (navigator.language || 'pt').toLowerCase().startsWith('pt') ? 'pt' : 'en';
+    return salvo && I18N[salvo] ? salvo : 'pt';
 })();
 
 /** Traduz uma chave. `vars` substitui marcadores {nome}. */
@@ -258,6 +271,10 @@ function dataCurta(iso) {
  */
 function aplicarIdioma() {
     document.documentElement.lang = LOCALES[idioma];
+
+    document.title = t('doc.title');
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', t('doc.desc'));
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const chave = el.dataset.i18n;

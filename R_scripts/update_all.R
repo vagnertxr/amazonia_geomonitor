@@ -78,23 +78,24 @@ for (ano_dl in anos_download) {
     ano_dl, ano_dl
   )
 
-  resultado <- tryCatch({
-    download_terrabrasilis_wfs(
-      layer_name   = "deter-amz:deter_amz",
-      cql_filter   = filtro_ano,
-      max_features = NULL
-    )
-  }, error = function(e) {
-    cat(sprintf("FALHOU (%s)\n", conditionMessage(e)))
-    return(NULL)
-  })
+  # Falhar aqui precisa derrubar a rotina inteira. Antes o erro so era impresso
+  # e o ano sumia da serie: a rotina seguia ate o commit e publicava um painel
+  # sem aquele ano, com aparencia normal. Como o script so abortava quando
+  # TODOS os anos falhavam, perder so 2024 (81 mil alertas) passava batido.
+  resultado <- download_terrabrasilis_wfs(
+    layer_name   = "deter-amz:deter_amz",
+    cql_filter   = filtro_ano,
+    max_features = NULL
+  )
 
-  if (!is.null(resultado) && nrow(resultado) > 0) {
-    alertas_lista[[as.character(ano_dl)]] <- resultado
-    cat(sprintf("%d registros\n", nrow(resultado)))
-  } else {
-    cat("0 registros\n")
+  # O ano corrente pode estar legitimamente vazio nos primeiros dias de janeiro;
+  # um ano ja fechado voltar vazio significa que a fonte mudou.
+  if (nrow(resultado) == 0 && ano_dl < max(anos_download)) {
+    stop(sprintf("O ano de %d voltou sem nenhum alerta. A camada do INPE mudou?", ano_dl))
   }
+
+  alertas_lista[[as.character(ano_dl)]] <- resultado
+  cat(sprintf("%d registros\n", nrow(resultado)))
 }
 
 if (length(alertas_lista) == 0) {
@@ -202,16 +203,20 @@ NY_KDE   <- 155
 # As camadas vêm do TerraBrasilis, não do geobr: são a mesma fonte dos alertas,
 # já vêm recortadas para a Amazônia Legal, e o servidor de dados do geobr
 # (ipea.gov.br) responde 404 para o endpoint que a versão instalada usa.
+# TI e UC sao as duas obrigatorias: perder uma delas nao zera o indicador, apenas
+# o subestima, e um numero plausivel porem errado e pior do que rotina nenhuma.
+# Foi assim que um 400 do servidor publicou "pct_area_protegida: null" em
+# 01/09/2026 sem nada no caminho barrar o commit.
 carregar_protegidas <- function() {
   baixar <- function(camada, tipo, col_nome) {
     # Estas camadas identificam as feicoes por "id" (o DETER usa "gid" e o
     # PRODES anual usa "fid"); a chave errada faz o servidor responder 400.
-    x <- tryCatch(download_terrabrasilis_wfs(camada, sort_key = "id"),
-                  error = function(e) {
-                    cat(sprintf("   %s indisponível (%s)\n", tipo, conditionMessage(e)))
-                    NULL
-                  })
-    if (is.null(x) || nrow(x) == 0) return(NULL)
+    x <- download_terrabrasilis_wfs(camada, sort_key = "id")
+
+    if (nrow(x) == 0) {
+      stop(sprintf("A camada de %s voltou vazia; sem ela o indicador sai errado.", tipo))
+    }
+
     x %>% st_transform(4326) %>%
       transmute(tipo = tipo, nome = as.character(.data[[col_nome]]))
   }
@@ -219,10 +224,7 @@ carregar_protegidas <- function() {
   ti <- baixar("prodes-legal-amz:indigenous_area_legal_amazon",  "TI", "terrai_nom")
   uc <- baixar("prodes-legal-amz:conservation_units_legal_amazon", "UC", "nome")
 
-  partes <- Filter(Negate(is.null), list(ti, uc))
-  if (length(partes) == 0) return(NULL)
-
-  extrair_poligonos(validar_geometrias(do.call(rbind, partes)))
+  extrair_poligonos(validar_geometrias(rbind(ti, uc)))
 }
 
 # st_make_valid em lote aborta com TopologyException por causa de um único
@@ -268,31 +270,30 @@ extrair_poligonos <- function(x) {
   x[manter & !st_is_empty(x), ]
 }
 
+# carregar_protegidas() aborta se qualquer camada faltar, entao aqui ja e certo
+# que ha dados: nao ha caso de "seguir sem as areas protegidas".
 protegidas <- carregar_protegidas()
-alertas_centroides$protegida <- NA_character_
 
-if (!is.null(protegidas)) {
-  cat(sprintf("   %d polígonos de áreas protegidas (%d TI, %d UC)\n",
-      nrow(protegidas), sum(protegidas$tipo == "TI"), sum(protegidas$tipo == "UC")))
+cat(sprintf("   %d polígonos de áreas protegidas (%d TI, %d UC)\n",
+    nrow(protegidas), sum(protegidas$tipo == "TI"), sum(protegidas$tipo == "UC")))
 
-  # Marca cada alerta com o tipo de área protegida que o contém.
-  idx <- st_intersects(alertas_centroides, protegidas)
-  primeiro <- vapply(idx, function(v) if (length(v)) v[1] else NA_integer_, integer(1))
-  alertas_centroides$protegida <- protegidas$tipo[primeiro]
+# Marca cada alerta com o tipo de área protegida que o contém.
+idx <- st_intersects(alertas_centroides, protegidas)
+primeiro <- vapply(idx, function(v) if (length(v)) v[1] else NA_integer_, integer(1))
+alertas_centroides$protegida <- protegidas$tipo[primeiro]
 
-  # Geometria simplificada: o mapa não precisa do traçado original, e a
-  # tolerância derruba o arquivo de dezenas de MB para poucos MB.
-  # 0.01 grau (~1,1 km) mantém a silhueta nos zooms usados e entrega ~1 MB.
-  # A simplificação pode degenerar geometrias, então extrai polígonos de novo.
-  prot_simples <- extrair_poligonos(
-    st_simplify(protegidas, dTolerance = 0.01, preserveTopology = TRUE))
+# Geometria simplificada: o mapa não precisa do traçado original, e a
+# tolerância derruba o arquivo de dezenas de MB para poucos MB.
+# 0.01 grau (~1,1 km) mantém a silhueta nos zooms usados e entrega ~1 MB.
+# A simplificação pode degenerar geometrias, então extrai polígonos de novo.
+prot_simples <- extrair_poligonos(
+  st_simplify(protegidas, dTolerance = 0.01, preserveTopology = TRUE))
 
-  arq_prot <- "data/areas_protegidas.geojson"
-  if (file.exists(arq_prot)) file.remove(arq_prot)
-  st_write(prot_simples, arq_prot, driver = "GeoJSON",
-           layer_options = "COORDINATE_PRECISION=4", quiet = TRUE)
-  cat(sprintf("   areas_protegidas.geojson: %.1f MB\n", file.size(arq_prot) / 1e6))
-}
+arq_prot <- "data/areas_protegidas.geojson"
+if (file.exists(arq_prot)) file.remove(arq_prot)
+st_write(prot_simples, arq_prot, driver = "GeoJSON",
+         layer_options = "COORDINATE_PRECISION=4", quiet = TRUE)
+cat(sprintf("   areas_protegidas.geojson: %.1f MB\n", file.size(arq_prot) / 1e6))
 
 # =============================================================================
 # 6. Exportar Alertas em Formato Colunar

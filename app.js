@@ -64,7 +64,7 @@ const map = L.map('map', {
 
 map.attributionControl.setPrefix('Leaflet');
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_2ra4_1_0298b888512ba3d20710e960', {
     maxZoom: 18,
     attribution: '&copy; CARTO | DETER/INPE | <a href="https://github.com/vagnertxr" target="_blank" rel="noopener">Vagner Teixeira</a>'
 }).addTo(map);

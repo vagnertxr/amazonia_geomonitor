@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-09-01T23:28:18-0300",
+  "gerado_em": "2026-09-01T23:39:38-0300",
   "ultimo_alerta": "2026-08-21",
   "primeiro_alerta": "2020-01-01",
   "total_alertas": 322396,
-  "area_total_km2": 180786.81,
-  "pct_area_protegida": null,
+  "area_total_km2": 180786.7,
+  "pct_area_protegida": 28.73,
   "fonte": "DETER / INPE — TerraBrasilis"
 }

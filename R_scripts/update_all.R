@@ -61,7 +61,7 @@ municipios_br <- carregar_municipios_com_retry()
 # =============================================================================
 # 2. Download com Paginação por Ano (sem limite de features)
 # =============================================================================
-cat("\n2. Baixando alertas DETER (paginação por ano, sem limite)...\n")
+cat("\n2. Baixando alertas DETER (por ano, com paginação)...\n")
 
 anos_download <- seq(
   as.numeric(format(as.Date(DATA_INICIO), "%Y")),
@@ -204,7 +204,9 @@ NY_KDE   <- 155
 # (ipea.gov.br) responde 404 para o endpoint que a versão instalada usa.
 carregar_protegidas <- function() {
   baixar <- function(camada, tipo, col_nome) {
-    x <- tryCatch(download_terrabrasilis_wfs(camada),
+    # Estas camadas identificam as feicoes por "id" (o DETER usa "gid" e o
+    # PRODES anual usa "fid"); a chave errada faz o servidor responder 400.
+    x <- tryCatch(download_terrabrasilis_wfs(camada, sort_key = "id"),
                   error = function(e) {
                     cat(sprintf("   %s indisponível (%s)\n", tipo, conditionMessage(e)))
                     NULL

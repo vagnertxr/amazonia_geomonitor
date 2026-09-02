@@ -8,48 +8,87 @@ library(dplyr)
 library(httr)
 
 #' Função genérica para baixar dados do INPE (TerraBrasilis) via API WFS
-#' 
+#'
+#' O GeoServer do INPE limita cada requisicao a 50.000 feicoes e nao avisa
+#' quando trunca: a resposta simplesmente volta com o teto e parece completa.
+#' Quebrar a consulta por ano nao resolve, porque anos grandes estouram o teto
+#' sozinhos (2024 tem 81 mil alertas). Por isso paginamos com startIndex/count
+#' ate a pagina vir incompleta.
+#'
+#' O sortBy nao e cosmetico: sem uma ordem definida o servidor pode devolver as
+#' paginas em ordens diferentes, fazendo registros se repetirem numa pagina e
+#' sumirem de outra.
+#'
 #' @param layer_name Nome da camada no GeoServer (ex: "deter-amz:deter_amz")
 #' @param cql_filter Filtro CQL opcional para reduzir o download (ex: "uf='MT' AND year=2023")
 #' @param max_features Limite de polígonos a baixar (ótimo para testes). Deixe NULL para baixar tudo.
+#' @param sort_key Atributo usado para ordenar a paginação. Precisa ser único na
+#'        camada: "gid" no DETER, "fid" no PRODES.
+#' @param page_size Tamanho de cada página. O teto do servidor é 50.000.
 #' @return Objeto sf com os dados solicitados
-download_terrabrasilis_wfs <- function(layer_name, cql_filter = NULL, max_features = NULL) {
-  
+download_terrabrasilis_wfs <- function(layer_name, cql_filter = NULL, max_features = NULL,
+                                       sort_key = "gid", page_size = 50000) {
+
   base_url <- "https://terrabrasilis.dpi.inpe.br/geoserver/ows"
-  
-  # Parametros base obrigatorios para o servico WFS
-  params <- list(
-    service = "WFS",
-    version = "1.0.0",
-    request = "GetFeature",
-    typeName = layer_name,
-    outputFormat = "application/json"
-  )
-  
-  if (!is.null(cql_filter)) {
-    params$cql_filter <- cql_filter
-  }
-  
-  if (!is.null(max_features)) {
-    params$maxFeatures <- max_features
-  }
-  
-  # Construir a URL com os parametros (httr cuida do URL encoding)
-  req <- httr::modify_url(base_url, query = params)
-  
+
   cat(sprintf("Baixando dados do INPE...\nCamada: %s\n", layer_name))
   if (!is.null(cql_filter)) cat(sprintf("Filtro: %s\n", cql_filter))
-  
-  # Baixar usando st_read, que le o GeoJSON nativamente e o converte em um dataframe espacial (sf)
-  # Usa quiet = TRUE para nao sujar o console com logs do GDAL
-  dados_sf <- tryCatch({
-    st_read(req, quiet = TRUE)
-  }, error = function(e) {
-    stop("Erro ao baixar dados do WFS. Verifique o filtro ou tente reduzir o escopo da pesquisa.\n", e)
-  })
-  
+
+  paginas  <- list()
+  baixados <- 0
+
+  repeat {
+    n_pedir <- page_size
+    if (!is.null(max_features)) {
+      restante <- max_features - baixados
+      if (restante <= 0) break
+      n_pedir <- min(page_size, restante)
+    }
+
+    params <- list(
+      service      = "WFS",
+      version      = "2.0.0",   # startIndex/count so existem a partir da 2.0.0
+      request      = "GetFeature",
+      typeNames    = layer_name,
+      outputFormat = "application/json",
+      sortBy       = sort_key,
+      count        = n_pedir,
+      startIndex   = baixados
+    )
+
+    if (!is.null(cql_filter)) {
+      params$cql_filter <- cql_filter
+    }
+
+    # Construir a URL com os parametros (httr cuida do URL encoding)
+    req <- httr::modify_url(base_url, query = params)
+
+    # Baixar usando st_read, que le o GeoJSON nativamente e o converte em um dataframe espacial (sf)
+    # Usa quiet = TRUE para nao sujar o console com logs do GDAL
+    pagina <- tryCatch({
+      st_read(req, quiet = TRUE)
+    }, error = function(e) {
+      stop("Erro ao baixar dados do WFS. Verifique o filtro ou tente reduzir o escopo da pesquisa.\n", e)
+    })
+
+    # Guarda a primeira pagina mesmo vazia, para devolver um sf com as colunas
+    # certas em vez de NULL quando o filtro nao casa com nada.
+    if (nrow(pagina) == 0) {
+      if (length(paginas) == 0) paginas[[1]] <- pagina
+      break
+    }
+
+    paginas[[length(paginas) + 1]] <- pagina
+    baixados <- baixados + nrow(pagina)
+
+    if (nrow(pagina) < n_pedir) break   # pagina incompleta = acabou
+    cat(sprintf("   ... %d registros, buscando mais\n", baixados))
+  }
+
+  dados_sf <- if (length(paginas) == 1) paginas[[1]] else do.call(rbind, paginas)
+
   cat(sprintf("Sucesso! %d registros carregados.\n", nrow(dados_sf)))
-  
+
   return(dados_sf)
 }
 
@@ -101,8 +140,10 @@ download_prodes <- function(bioma = "amz", estado = NULL, ano = NULL, limite_lin
   if (!is.null(ano)) {
     filtros <- c(filtros, sprintf("year=%s", ano))
   }
-  
+
   filtro_final <- if(length(filtros) > 0) paste(filtros, collapse = " AND ") else NULL
-  
-  return(download_terrabrasilis_wfs(camada, cql_filter = filtro_final, max_features = limite_linhas))
+
+  # O PRODES identifica as feicoes por "fid"; o DETER usa "gid" (padrao da funcao).
+  return(download_terrabrasilis_wfs(camada, cql_filter = filtro_final,
+                                    max_features = limite_linhas, sort_key = "fid"))
 }

@@ -82,10 +82,15 @@ for (ano_dl in anos_download) {
   # e o ano sumia da serie: a rotina seguia ate o commit e publicava um painel
   # sem aquele ano, com aparencia normal. Como o script so abortava quando
   # TODOS os anos falhavam, perder so 2024 (81 mil alertas) passava batido.
+  # "gid" sozinho nao serve para ordenar: ele colide no DETER (17 mil colisoes
+  # so em 2024, em alertas sem nenhuma relacao entre si). Empate na fronteira
+  # entre duas paginas pode repetir e perder registros, entao a ordem usa a
+  # tripla que e de fato unica.
   resultado <- download_terrabrasilis_wfs(
     layer_name   = "deter-amz:deter_amz",
     cql_filter   = filtro_ano,
-    max_features = NULL
+    max_features = NULL,
+    sort_key     = "gid,view_date,mun_geocod"
   )
 
   # O ano corrente pode estar legitimamente vazio nos primeiros dias de janeiro;

@@ -22,12 +22,18 @@ library(httr)
 #' @param layer_name Nome da camada no GeoServer (ex: "deter-amz:deter_amz")
 #' @param cql_filter Filtro CQL opcional para reduzir o download (ex: "uf='MT' AND year=2023")
 #' @param max_features Limite de polígonos a baixar (ótimo para testes). Deixe NULL para baixar tudo.
-#' @param sort_key Atributo usado para ordenar a paginação. Precisa ser único na
-#'        camada: "gid" no DETER, "fid" no PRODES.
+#' @param sort_key Atributo(s) usados para ordenar a paginação, separados por
+#'        vírgula. Obrigatorio de proposito: cada camada usa uma chave diferente
+#'        e a errada faz o servidor responder 400, entao nao ha padrao seguro.
+#'        Precisa identificar a feicao de forma unica, senao um empate na
+#'        fronteira entre duas paginas pode repetir e perder registros. No DETER
+#'        "gid" NAO serve sozinho (colide entre alertas sem relacao); use
+#'        "gid,view_date,mun_geocod" na Amazonia e "gid,view_date,municipality"
+#'        no Cerrado, que nao tem mun_geocod. No PRODES é "fid"; em TI/UC é "id".
 #' @param page_size Tamanho de cada página. O teto do servidor é 50.000.
 #' @return Objeto sf com os dados solicitados
 download_terrabrasilis_wfs <- function(layer_name, cql_filter = NULL, max_features = NULL,
-                                       sort_key = "gid", page_size = 50000) {
+                                       sort_key, page_size = 50000) {
 
   base_url <- "https://terrabrasilis.dpi.inpe.br/geoserver/ows"
 
@@ -101,7 +107,10 @@ download_terrabrasilis_wfs <- function(layer_name, cql_filter = NULL, max_featur
 download_deter <- function(bioma = "amz", estado = NULL, data_inicio = "2024-01-01", limite_linhas = NULL) {
   
   camada <- ifelse(bioma == "amz", "deter-amz:deter_amz", "deter-cerrado-nb:deter_cerrado")
-  
+
+  # A camada do Cerrado nao tem mun_geocod; usa o nome do municipio.
+  chave <- if (bioma == "amz") "gid,view_date,mun_geocod" else "gid,view_date,municipality"
+
   filtros <- c()
   
   if (!is.null(estado)) {
@@ -115,7 +124,8 @@ download_deter <- function(bioma = "amz", estado = NULL, data_inicio = "2024-01-
   # Juntar os filtros com AND
   filtro_final <- if(length(filtros) > 0) paste(filtros, collapse = " AND ") else NULL
   
-  return(download_terrabrasilis_wfs(camada, cql_filter = filtro_final, max_features = limite_linhas))
+  return(download_terrabrasilis_wfs(camada, cql_filter = filtro_final,
+                                    max_features = limite_linhas, sort_key = chave))
 }
 
 #' Rotina amigável para baixar dados do PRODES Anual (Desmatamento Consolidado)
